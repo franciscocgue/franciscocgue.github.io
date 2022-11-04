@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;700&display=swap');
+
+.container {
+    border: 1px solid grey;
+    margin: 0.5rem 2rem 1.5rem 2rem;
+    padding: 0 0rem 0.2rem 0rem;
+    border-radius: 7px;
+}
+
+.container .header {
+    background-color: rgb(17, 17, 29);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.container .header h3 {
+    margin: 0;
+}
+
+.container .header .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.container .header .date {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.container .summary {
+    padding: 1rem 1rem 0 1rem;
+    font-style: italic;
+}
+
+.container .content {
+    padding: 0 1rem;
+    font-family: 'Lora', serif;
+}

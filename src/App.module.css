@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    min-width: 300px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.container {
+    height: fit-content;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 20vw;
+}
+
+.container .right {
+    padding: 1rem;
+    width: 80vw;
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}

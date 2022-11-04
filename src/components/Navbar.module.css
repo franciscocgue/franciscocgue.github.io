@@ -1,0 +1,87 @@
+.container {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* position: absolute; */
+    overflow-y: auto;
+    border-right: 2px solid grey;
+    background-color: rgb(17, 17, 29);
+    color: white;
+}
+
+.container ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container ul li {
+    width: 100%;
+}
+
+.container .section {
+    font-weight: 600;
+    padding: 0.4rem 0.3rem;
+    margin: 0.4rem 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 0.7rem;
+    /* border-bottom: 1px solid rgb(70, 70, 70); */
+    cursor: pointer;
+    width: 100%;
+}
+
+.container .section:hover {
+    color: rgb(70, 70, 70);
+    background-color: white;
+}
+
+.container .search {
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    padding: 0.4rem 0.3rem;
+    margin: 0.4rem 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 0.7rem;
+    /* border-bottom: 1px solid rgb(70, 70, 70); */
+}
+
+.container .search div {
+    /* max-width: 100%; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-size: small;}
+
+.container .search .icon {
+    display: inline-block;
+}
+
+.container .topics p {
+    padding: 0.3rem 0.3rem 0.3rem 1rem;
+    margin: 0;
+    color: grey;
+    border-bottom: 1px solid grey;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.container .topics p.highlight-topic {
+    color: white;
+    /* font-weight: bolder; */
+}
