@@ -16,7 +16,7 @@ let entries: Entry[];
 entries  = [
     {
         date: 'Until now - June 2022',
-        title: 'Getting started',
+        title: 'Getting started - 😄 PAGE IN PROGRESS 😄',
         summary: 'First 5 years',
         keywords: [],
         content: <>

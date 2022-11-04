@@ -1,0 +1,177 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/components/Entry.module.css ***!
+  \***************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;700&display=swap);
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/components/Entry.module.css (1) ***!
+  \*******************************************************************************************************************/
+.Entry-module_container_eFe7l {
+    border: 1px solid grey;
+    margin: 0.5rem 2rem 1.5rem 2rem;
+    padding: 0 0rem 0.2rem 0rem;
+    border-radius: 7px;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ {
+    background-color: rgb(17, 17, 29);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ h3 {
+    margin: 0;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ .Entry-module_title_iSQbu {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ .Entry-module_date_yxtjp {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.Entry-module_container_eFe7l .Entry-module_summary_JqV5m {
+    padding: 1rem 1rem 0 1rem;
+    font-style: italic;
+}
+
+.Entry-module_container_eFe7l .Entry-module_content_Pd4Ek {
+    padding: 0 1rem;
+    font-family: 'Lora', serif;
+}
+/*!**************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/App.module.css ***!
+  \**************************************************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    min-width: 300px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.App-module_container_RMIWH {
+    height: fit-content;
+    height: 100vh;
+    width: 100vw;
+}
+
+.App-module_container_RMIWH .App-module_left_ZyUCm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 20vw;
+}
+
+.App-module_container_RMIWH .App-module_right_w0gcr {
+    padding: 1rem;
+    width: 80vw;
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./src/components/Navbar.module.css ***!
+  \****************************************************************************************************************/
+.Navbar-module_container_VlUdL {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* position: absolute; */
+    overflow-y: auto;
+    border-right: 2px solid grey;
+    background-color: rgb(17, 17, 29);
+    color: white;
+}
+
+.Navbar-module_container_VlUdL ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.Navbar-module_container_VlUdL ul li {
+    width: 100%;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_section_fpvcz {
+    font-weight: 600;
+    padding: 0.4rem 0.3rem;
+    margin: 0.4rem 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 0.7rem;
+    /* border-bottom: 1px solid rgb(70, 70, 70); */
+    cursor: pointer;
+    width: 100%;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_section_fpvcz:hover {
+    color: rgb(70, 70, 70);
+    background-color: white;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_search_E3fRQ {
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    padding: 0.4rem 0.3rem;
+    margin: 0.4rem 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 0.7rem;
+    /* border-bottom: 1px solid rgb(70, 70, 70); */
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_search_E3fRQ div {
+    /* max-width: 100%; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.Navbar-module_search_E3fRQ input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-size: small;}
+
+.Navbar-module_container_VlUdL .Navbar-module_search_E3fRQ .Navbar-module_icon_MtExr {
+    display: inline-block;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_topics_gZZw6 p {
+    padding: 0.3rem 0.3rem 0.3rem 1rem;
+    margin: 0;
+    color: grey;
+    border-bottom: 1px solid grey;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_topics_gZZw6 p.Navbar-module_highlight-topic_sJqIz {
+    color: white;
+    /* font-weight: bolder; */
+}
