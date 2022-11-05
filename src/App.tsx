@@ -61,10 +61,10 @@ entries = [
         </>
     },
     {
-        date: '2022-09-10',
-        title: 'AWS Deploy',
-        summary: 'example',
-        keywords: ['AWS', 'React', 'Node'],
+        date: '2022-07-12',
+        title: 'Testing',
+        summary: 'Snapshot testing with Jest',
+        keywords: ['Testing', 'Testing - Snapshot', 'Jest'],
         content: <>
             <p>Bla bla bla</p>
             <p>Y más bla bla bla</p>
@@ -116,6 +116,8 @@ keywords = keywords.filter((val: string, idx: number, arr) => {
 const App = () => {
 
     // selected topic
+    const [section, setSection] = useState('Code Journal');
+    // selected topic
     const [topic, setTopic] = useState('');
     // entries matching selected topic
     const [filteredEntries, setFilteredEntries] = useState(entries);
@@ -148,10 +150,13 @@ const App = () => {
     return (
         <div className={styles.container}>
             <div className={styles.left}>
-                <Navbar keywords={keywords} onTopicChange={setTopic} />
+                <Navbar keywords={keywords} onTopicChange={setTopic} section_={section} onSectionChange={setSection} />
             </div>
             <div className={styles.right}>
-                {filteredEntries && filteredEntries.map((entry, idx) => <Entry key={entry.title + entry.date + idx} date={entry.date} title={entry.title} summary={entry.summary} >{entry.content}</Entry>)}
+                {section === 'Code Journal' && filteredEntries && filteredEntries.map((entry, idx) => <Entry key={entry.title + entry.date + idx} date={entry.date} title={entry.title} summary={entry.summary} >{entry.content}</Entry>)}
+                {section === 'Home' && <div>Oops this is not yet finished! 😳</div>}
+                {section === 'Curriculum' && <div>Oops this is not yet finished! 😳</div>}
+                {section === 'Hobby Projects' && <div>Oops this is not yet finished! 😳</div>}
             </div>
         </div>
     )
