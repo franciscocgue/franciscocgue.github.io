@@ -56,6 +56,10 @@ module.exports = {
                 loader: 'ts-loader'
             },
             {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',
+            },
+            {
                 test: /\.css$/,
                 use: [
                     // https://stackoverflow.com/questions/64316510/uncaught-typeerror-webpack-imported-module-1-default-is-undefined-react-sas

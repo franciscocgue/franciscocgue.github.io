@@ -33,3 +33,15 @@ body {
     right: 0;
     height: 100vh;
 }
+
+.container .img {
+    max-width: 900px;
+    margin: auto;
+}
+
+.container .code {
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+    padding: 1px 4px;
+    border: 1px solid rgb(184, 184, 184);
+}

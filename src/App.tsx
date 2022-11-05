@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Entry from "./components/Entry";
+import timeline from './assets/timeline.png';
 
 import styles from './App.module.css';
 import Navbar from "./components/Navbar";
@@ -12,36 +13,51 @@ interface Entry {
     keywords: String[]
 }
 
+const chessGameUrl = 'http://chessalb-1072294051.eu-central-1.elb.amazonaws.com/chess';
+
 let entries: Entry[];
-entries  = [
+entries = [
     {
         date: 'Until now - June 2022',
-        title: 'Getting started - 😄 PAGE IN PROGRESS 😄',
+        title: 'Background - 😄 PAGE IN PROGRESS 😄',
         summary: 'First 5 years',
         keywords: [],
         content: <>
-            <p>Unfortunately I am not starting this at the beginning of the path, but 5 years later, since I started working. After finishing a master in Aerospace Engineering in Madrid in late 2017, I moved to Germany, where I began to work as engineer. Before that, I did a couple of internships related to aircraft systems modelling. </p>
-            <p>During the last years, I developed SCADA applications (Supervisory Control adn Data Acquisition). Both the backend and frontend, including the database design. The SCADA software used a Java version of Python, Jython. Apart from that, my first contacts with Python came from the need to automate some spreadsheets work, Excel. For that I used the awesome resource <a href="https://automatetheboringstuff.com/" target={'_blank'}>Automate the Boring Stuff with Python</a>. Later, I had to face some repetitive tasks, which are as necessary as boring. For that I started using Selenium, and discovered how nice it felt to automate broswer tasks. To keep track of these files I used git.</p>
-            <p>Around one year ago, the environment changed to React and Node: web applications. So I started to learn JavaScript. And HTML adn CSS, with which I was already familiar. This opened a whole new set of possibilities and things I did not know: hosting applications in the cloud (AWS), CI/CD, Docker, etc.</p>
+            <p style={{ borderBottom: '1px dashed grey', paddingBottom: '1rem', marginBottom: '1rem' }}>The background before starting this <i>Code Journal</i> is shown below. Some additional details is how I started using python to <a target='_blank' href="https://automatetheboringstuff.com/">Automate the Boring Stuff</a>, or how I started learning AWS to host a hobby project I am working on.</p>
+            <div className={styles.img}>
+                <img width='100%' src={timeline} />
+            </div>
         </>
     },
     {
-        date: '2022-09-10',
-        title: 'AWS Deploy',
-        keywords: ['Deploy', 'webpack'],
+        date: '2022-07-01',
+        title: 'Chess Game',
+        summary: 'Hobby project - learning',
+        keywords: ['Hobby Project'],
         content: <>
-            <p>Bla bla bla</p>
-            <p>Y más bla bla bla</p>
+            <p>I decided to start a hobby project to try things for which I do not have time in the fast-paced work environment. I picked a Chess game, for three main reasons:</p>
+            <ul>
+                <li>Sharpen frontend skills</li>
+                <li>Interesting practice for backend & logic</li>
+                <li>Project can be easily extended: multiplayer, saving scores to DB, AI & single player, realtime with websockets, etc.</li>
+            </ul>
+            <p>The idea is to use this project as a way to learn, get familiar or improve:</p>
+            <p style={{ marginLeft: '2rem' }}><i>TypeScript, app deployment, docker, react redux, react testing library, jest, webpack, bable, debugging</i> and much more!</p>
+            <p style={{ borderTop: '1px dashed grey', paddingTop: '1rem', marginTop: '1rem' }}>
+                By the way, game deployed now in <a target='_blank' href={chessGameUrl}>Amazon AWS</a>
+            </p>
         </>
     },
     {
-        date: '2022-09-10',
-        title: 'AWS Deploy',
-        summary: 'example',
-        keywords: ['AWS', 'Testing'],
+        date: '2022-07-08',
+        title: 'One Day With TypeScript',
+        summary: 'Getting started with TypeScript',
+        keywords: ['TypeScript'],
         content: <>
-            <p>Bla bla bla</p>
-            <p>Y más bla bla bla</p>
+            <p>When I started using TypeScript a few days ago I was unsure. It looked like it required more work than it actually paid off. But in search of motivation I kept reading how nice it was, specially for large projects. And how it was like documenting the code.</p>
+            <p>Well, I am beginning to agree. The autocompletion is great when the IDE you use (let's say, vs code) knows what the type is. So if you define a variable with no type as in <code className={styles.code}>const whatIsMyType;</code>, then vs code will not be able to autocomplete when you write <code className={styles.code}>whatIsMyType.</code>. But if instead you do <code className={styles.code}>const iHaveAType: string[];</code>, then it will greatly help you by providing you with autocomplete functions proper of an Array, such as <i>includes</i> and others.</p>
+            <p>As for the documentation, you will no longer have Objects whose key-value pairs have uncertain types.</p>
+            <p>But yes, it is still a pain to be forced to add types to every single thing you write. For that you can configure it to allow nulls, but then what would be the point?</p>
         </>
     },
     {
@@ -108,7 +124,7 @@ const App = () => {
     useEffect(() => {
         if (topic !== '') {
             let fentries = [] as Entry[];
-            
+
             entries.forEach(item => {
                 const entryTopics = item.keywords.map(item => item.toLowerCase())
                 console.log('entryTopics', entryTopics)
@@ -118,21 +134,21 @@ const App = () => {
                     fentries.push(item);
                 }
             });
-    
+
             setFilteredEntries(fentries);
         } else {
             setFilteredEntries(entries);
         }
     }, [topic]);
 
-    useEffect(()=> {
+    useEffect(() => {
         console.log('topic', topic)
     }, [topic])
 
     return (
         <div className={styles.container}>
             <div className={styles.left}>
-                <Navbar keywords={keywords} onTopicChange={setTopic}/>
+                <Navbar keywords={keywords} onTopicChange={setTopic} />
             </div>
             <div className={styles.right}>
                 {filteredEntries && filteredEntries.map((entry, idx) => <Entry key={entry.title + entry.date + idx} date={entry.date} title={entry.title} summary={entry.summary} >{entry.content}</Entry>)}
