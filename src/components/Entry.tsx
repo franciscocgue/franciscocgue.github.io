@@ -4,7 +4,7 @@ import styles from './Entry.module.css';
 interface Props {
     date: Date | string,
     title: string,
-    summary: string,
+    summary?: string,
     children: React.ReactNode,
 }
 

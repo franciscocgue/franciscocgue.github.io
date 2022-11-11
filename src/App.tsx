@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Entry from "./components/Entry";
 import timeline from './assets/timeline.png';
+import wip from './assets/work-in-progress.png';
 
 import styles from './App.module.css';
 import Navbar from "./components/Navbar";
@@ -100,6 +101,71 @@ entries = [
             <p>Y más bla bla bla</p>
         </>
     },
+    {
+        date: '2022-11-11',
+        title: 'Redux vs React Context and Reducer',
+        // summary: 'Redux vs React Context and Reducer',
+        keywords: ['Redux', 'React Redux', 'useReducer', 'React Context API'],
+        content: <>
+            <p>So far I had never used Redux nor <a href="https://react-redux.js.org/" target={'_blank'}>React Redux</a>. I have used however the <a href="https://reactjs.org/docs/context.html" target={'_blank'}>React Context API</a> and the <a target={'_blank'} href='https://es.reactjs.org/docs/hooks-reference.html#usereducer'>useReducer</a> React hook. And from my basic understanding, it seems equivalent. Even the React documentation for useReducer says <i>"If you’re familiar with Redux, you already know how this works."</i></p>
+            <p>But I was curious, and you cannot judge something without using. So I started to get familiar with Redux.</p>
+            <p>Below example shows how to use the (main?) Redux advantages by using the Context API and useState. For simplicity (and because writing code as HTML is not fun 😅), instead of using useReducer dispatching actions, the actual context object has "handlers" to do the actions, via useState.</p>
+            <p><i>store.js</i></p>
+            <pre>
+                <code></code>
+                <code className={styles['code-comment']}>// Create context and initialize as empty (for autocompletion later)</code>
+                <code>{' '}</code>
+                <code>const MyContext = React.createContext({'{'}</code>
+                <code>  counter: 0,</code>
+                <code>  onIncrease: (qty) ={'>'} {'{ }'},</code>
+                <code>{'}'})</code>
+                <code>{' '}</code>
+                <code className={styles['code-comment']}>// Next create the provider and export it</code>
+                <code className={styles['code-comment']}>// It will be used there where components below need to access it</code>
+                <code>{' '}</code>
+                <code>export const MyContextProvider = props ={'> {'}</code>
+                <code className={styles['code-comment']}>  // Via useState (or better, useReducer) define logic to update the context object</code>
+                <code>  const [counter, setCounter] = useState(0);</code>
+                <code>  const onIncreaseHandler = qty ={'> {'}</code>
+                <code>      setValue(prev ={'>'} prev + qty)</code>
+                <code>  {'}'}</code>
+                <code>{' '}</code>
+                <code className={styles['code-comment']}>  // Return provider</code>
+                <code>{' '}</code>
+                <code>  return (</code>
+                <code>    {'<MyContext.Provider'}</code>
+                <code>        value={'{{'}</code>
+                <code>            counter: counter,</code>
+                <code>            onIncrease: onIncreaseHandler,</code>
+                <code>        {'}}'}</code>
+                <code>    {'>'}</code>
+                <code>        {'{props.children}'}</code>
+                <code>    {'</MyContext.Provider>'}</code>
+                <code>  )</code>
+                <code>{'};'}</code>
+                <code>{' '}</code>
+                <code>{'export default MyContext;'}</code>
+            </pre>
+            <p>And how to use in a component (equivalent to the Redux <i>subscribe</i> to update the render of the UI):</p>
+            <p><i>MyComponent.js</i></p>
+            <pre>
+                <code>import MyContext from './path/to/store'</code>
+                <code>{'const MyComponent = () => {'}</code>
+                <code>  {'const ctx = useContext(MyContext);'}</code>
+                <code className={styles['code-comment']}>  // ctx.value and ctx.onIncrease available!</code>
+                <code>  {'...'}</code>
+                <code>{'}'}</code>
+            </pre>
+            <p>That is very similar to the benefits we get with Redux:</p>
+            <ul>
+                <li>Shared states are in a central location accessible by components (no need to lift up state)</li>
+                <li>State logic management is central, meaning better maintenability</li>
+            </ul>
+            <p>If instead of <i>useState</i> we use <i>useReducer</i> in the store, logic would be more 'organized', since instead of defining the actions as functions or handlers in the store object, we could use a single (reducer) function.</p>
+            <p>In any case, I never used Redux in an application <i>yet</i>
+                , all this is based on some reading. So that is of course the next step!</p>
+        </>
+    },
 ]
 
 let keywords = [] as String[];
@@ -109,7 +175,7 @@ entries.forEach(item => {
     }
 })
 
-keywords = keywords.filter((val: string, idx: number, arr) => {
+keywords = keywords.filter((val: String, idx: Number, arr) => {
     return arr.indexOf(val) === idx;
 })
 
@@ -121,6 +187,8 @@ const App = () => {
     const [topic, setTopic] = useState('');
     // entries matching selected topic
     const [filteredEntries, setFilteredEntries] = useState(entries);
+    // hide banner
+    const [showBanner, setShowBanner] = useState(true);
 
     // filter entries if topic selected
     useEffect(() => {
@@ -153,10 +221,24 @@ const App = () => {
                 <Navbar keywords={keywords} onTopicChange={setTopic} section_={section} onSectionChange={setSection} />
             </div>
             <div className={styles.right}>
+                {showBanner && <div className={styles.wip}>
+                    <div>
+                        <p>Hey There!</p>
+                        <p style={{ marginBottom: 0, paddingLeft: '1rem' }}>This page is not yet finished 😳</p>
+                        <p style={{ marginTop: 5, paddingLeft: '1rem' }}>I am migrating the <i>Code Journal</i> from this <a target={'_blank'} href='https://github.com/franciscocgue/my-journey'>Github repo</a> and adding new sections</p>
+                    </div>
+                    <div className={styles['wip-img']}>
+                        <img height={110} width={110} src={wip} />
+                    </div>
+                    <span className={styles.close} onClick={() => setShowBanner(false)}>&times;</span>
+                </div>}
+                {!showBanner && <div className={styles.wip}>
+                    <span className={styles['msg-hidden']} onClick={() => setShowBanner(true)}>Click to see message</span>
+                </div>}
                 {section === 'Code Journal' && filteredEntries && filteredEntries.map((entry, idx) => <Entry key={entry.title + entry.date + idx} date={entry.date} title={entry.title} summary={entry.summary} >{entry.content}</Entry>)}
-                {section === 'Home' && <div>Oops this is not yet finished! 😳</div>}
-                {section === 'Curriculum' && <div>Oops this is not yet finished! 😳</div>}
-                {section === 'Hobby Projects' && <div>Oops this is not yet finished! 😳</div>}
+                {section === 'Home' && <div></div>}
+                {section === 'Curriculum' && <div></div>}
+                {section === 'Hobby Projects' && <div></div>}
             </div>
         </div>
     )

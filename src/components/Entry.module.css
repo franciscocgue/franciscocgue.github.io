@@ -24,20 +24,25 @@
 
 .container .header .title {
     font-family: 'Montserrat', sans-serif;
+    /* font-family:"Segoe UI",Arial,sans-serif; */
     font-weight: 700;
 }
 
 .container .header .date {
     font-family: 'Montserrat', sans-serif;
+    /* font-family:"Segoe UI",Arial,sans-serif; */
     font-weight: 300;
 }
 
 .container .summary {
     padding: 1rem 1rem 0 1rem;
     font-style: italic;
+    font-family:"Segoe UI",Arial,sans-serif;
 }
 
 .container .content {
+    font-size: 1rem;
     padding: 0 1rem;
-    font-family: 'Lora', serif;
+    /* font-family: 'Lora', serif; */
+    font-family:"Segoe UI",Arial,sans-serif;
 }
