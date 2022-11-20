@@ -17,6 +17,18 @@ interface Entry {
 
 const chessGameUrl = 'http://chessalb-1072294051.eu-central-1.elb.amazonaws.com/chess';
 
+function sortEntries(a: Entry, b: Entry) {
+    const aDate = new Date(a.date);
+    const bDate = new Date(b.date);
+    if (aDate < bDate) {
+        return -1;
+    }
+    if (aDate > bDate) {
+        return 1;
+    }
+    return 0;
+}
+
 let entries: Entry[];
 entries = [
     {
@@ -48,36 +60,6 @@ entries = [
             <p>Well, I am beginning to agree. The autocompletion is great when the IDE you use (let's say, vs code) knows what the type is. So if you define a variable with no type as in <code className={styles.code}>const whatIsMyType;</code>, then vs code will not be able to autocomplete when you write <code className={styles.code}>whatIsMyType.</code>. But if instead you do <code className={styles.code}>const iHaveAType: string[];</code>, then it will greatly help you by providing you with autocomplete functions proper of an Array, such as <i>includes</i> and others.</p>
             <p>As for the documentation, you will no longer have Objects whose key-value pairs have uncertain types.</p>
             <p>But yes, it is still a pain to be forced to add types to every single thing you write. For that you can configure it to allow nulls, but then what would be the point?</p>
-        </>
-    },
-    {
-        date: '2022-07-12',
-        title: 'Testing',
-        summary: 'Snapshot testing with Jest',
-        keywords: ['Testing', 'Testing - Snapshot', 'Jest'],
-        content: <>
-            <p>Bla bla bla</p>
-            <p>Y más bla bla bla</p>
-        </>
-    },
-    {
-        date: '2022-09-10',
-        title: 'AWS Deploy',
-        summary: 'example',
-        keywords: ['AWS', 'Redux', 'Testing - Jest', 'Testing - RTL', 'CSS'],
-        content: <>
-            <p>Bla bla bla</p>
-            <p>Y más bla bla bla</p>
-        </>
-    },
-    {
-        date: '2022-09-10',
-        title: 'AWS Deploy',
-        summary: 'example',
-        keywords: ['AWS'],
-        content: <>
-            <p>Bla bla bla</p>
-            <p>Y más bla bla bla</p>
         </>
     },
     {
@@ -233,7 +215,7 @@ const App = () => {
                 {!showBanner && <div className={`${styles['wip-inner']} ${styles['wip']}`}>
                     <span className={styles['msg-hidden']} onClick={() => setShowBanner(true)}>Click to see message</span>
                 </div>}
-                {section === 'Code Journal' && filteredEntries && filteredEntries.map((entry, idx) => <Entry key={entry.title + entry.date + idx} date={entry.date} title={entry.title} summary={entry.summary} >{entry.content}</Entry>)}
+                {section === 'Code Journal' && filteredEntries && filteredEntries.sort(sortEntries).map((entry, idx) => <Entry key={entry.title + entry.date + idx} date={entry.date} title={entry.title} summary={entry.summary} >{entry.content}</Entry>)}
                 {section === 'Home' && <div>
                     <Home />
                 </div>}

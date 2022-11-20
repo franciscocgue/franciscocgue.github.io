@@ -102,11 +102,13 @@ const Navbar = ({ keywords, onTopicChange, section_, onSectionChange, onNavbarCo
                     </li>
                     <li className={styles.section}>
                         <button className={`${section === 'Code Journal' ? styles.selected : ''}`} onClick={() => {
-                            setSection('Code Journal');
-                            onSectionChange('Code Journal');
-                            onTopicChange('');
-                            setTopic('');
-                            setSearch('');
+                            if (section !== 'Code Journal') {
+                                setSection('Code Journal');
+                                onSectionChange('Code Journal');
+                                onTopicChange('');
+                                setTopic('');
+                                setSearch('');
+                            }
                         }
                         }>
                             <span><BsJournalCode /></span><span className={`${isCollapseNavbar ? styles['hide-menu'] : ''}`}>Code Journal</span>
