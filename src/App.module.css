@@ -13,10 +13,13 @@ body {
 }
 
 .wip {
-    margin: 0rem 2rem 0.8rem 2rem;
+    margin: 0rem 0rem 0.8rem 0rem;
     padding: 0.5rem 0.5rem 0.1rem 0.5rem;
     background-color: #fde4b9;
     border-radius: 9px;
+}
+
+.wip-inner {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -33,10 +36,12 @@ body {
 .wip-img img {
     position: relative;
     animation: rotation 3s infinite linear;
+    margin-bottom: 1rem;
 }
 
 .msg-hidden {
     cursor: pointer;
+    width: 100%;
 }
 
 @keyframes rotation {
@@ -51,6 +56,7 @@ body {
     font-size: 32px;
     height: fit-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
     /* font-weight: bold; */
 }
 
@@ -58,12 +64,11 @@ body {
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .container {
     height: fit-content;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
 }
 
@@ -72,19 +77,38 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 20vw;
+    /* width: 8vw; */
+    /* width: 23vw; */
+    /* display: none; */
 }
 
 .container .right {
-    padding: 1rem;
-    width: 80vw;
+    padding: 2rem;
+    /* width: 92vw; */
+    /* width: 77vw; */
     position: absolute;
     overflow-y: auto;
     top: 0;
     right: 0;
     height: 100vh;
+    /* display: none; */
 }
 
+.left-nvcollapsed {
+    width: 60px;
+}
+
+.right-nvcollapsed {
+    width: calc(100vw - 60px);
+}
+
+.left-nvexpanded {
+    width: 23vw;
+}
+
+.right-nvexpanded {
+    width: 77vw;
+}
 
 .container .img {
     max-width: 900px;
@@ -96,21 +120,54 @@ body {
     border-radius: 5px;
     padding: 1px 4px;
     border: 1px solid rgb(184, 184, 184);
+    max-width: 100%;
 }
 
 pre {
     background-color: rgb(228, 228, 228);
-    width: fit-content;
-    padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
     margin-left: 1rem;
     font-size: 80%;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 pre code {
     display: block;
+    max-width: 100%;
 }
 
 .code-comment {
     color: rgb(99, 99, 99);
 }
 
+
+@media only screen and (max-width:600px) {
+    /* phones */
+
+    .container {
+        /* height: 100vh; */
+        width: 100vw;
+    }
+
+    .container .left {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        overflow-y: auto;
+        /* top: 0;
+        right: 0; */
+    }
+    .container .right {
+        width: 100vw;
+        height: fit-content;
+        position: relative;
+        overflow-y: auto;
+        /* top: 0;
+        right: 0; */
+    }
+
+    .wip-inner {
+        flex-direction: column;
+    }
+}

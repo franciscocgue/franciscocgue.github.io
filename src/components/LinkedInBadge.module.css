@@ -1,0 +1,60 @@
+.container {
+    width: 125px;
+    height: 310px;
+    border-radius: 8px;
+    border: 1px solid rgb(233, 229, 223);
+}
+
+.header {
+    width: 100%;
+    height: 45px;
+    padding: 12px 1rem 12px 1rem;
+    background-color: rgb(233, 229, 223);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.content {
+    padding: .8rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo {
+    width: 84px;
+    height: 21px;
+}
+
+.content img {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.name {
+    font-weight: 600;
+    font-style: 'arial narrow';
+}
+
+.link {
+    display: block;
+    border-radius: 20px;
+    border: 1px solid rgb(42, 42, 255);;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(42, 42, 255);
+    width: fit-content;
+    text-align: center;
+}
+
+.link:hover {
+    border: 2px solid rgb(42, 42, 255);;
+    margin-top: calc(1rem - 1px);
+    margin-bottom: calc(1rem - 1px);
+    margin-left: -1px;
+    margin-right: -1px;
+}

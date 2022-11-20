@@ -5,6 +5,7 @@ import wip from './assets/work-in-progress.png';
 
 import styles from './App.module.css';
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 interface Entry {
     date: Date | string,
@@ -18,18 +19,6 @@ const chessGameUrl = 'http://chessalb-1072294051.eu-central-1.elb.amazonaws.com/
 
 let entries: Entry[];
 entries = [
-    {
-        date: 'Until now - June 2022',
-        title: 'Background - 😄 PAGE IN PROGRESS 😄',
-        summary: 'First 5 years',
-        keywords: [],
-        content: <>
-            <p style={{ borderBottom: '1px dashed grey', paddingBottom: '1rem', marginBottom: '1rem' }}>The background before starting this <i>Code Journal</i> is shown below. Some additional details is how I started using python to <a target='_blank' href="https://automatetheboringstuff.com/">Automate the Boring Stuff</a>, or how I started learning AWS to host a hobby project I am working on.</p>
-            <div className={styles.img}>
-                <img width='100%' src={timeline} />
-            </div>
-        </>
-    },
     {
         date: '2022-07-01',
         title: 'Chess Game',
@@ -92,13 +81,18 @@ entries = [
         </>
     },
     {
-        date: '2022-09-10',
-        title: 'AWS Deploy',
-        summary: 'example',
-        keywords: ['AWS'],
+        date: '2022-11-19',
+        title: 'CSS on mobile',
+        summary: 'CSS, media queries, and meta tag',
+        keywords: ['CSS', 'Media queries'],
         content: <>
-            <p>Bla bla bla</p>
-            <p>Y más bla bla bla</p>
+            <p>I was checking how this web page looked on my smartphone. Not the first time I do that, but this time I wanted to improve the layout.</p>
+            <p>I started playing with media queries and learned about the difference about <code className={styles.code}>min-width</code>, <code className={styles.code}>max-width</code>, and <b>mobile-first</b> development.</p>
+            <p>So I set a threshold to change CSS of 320px, reading how it is a best practice or convention for phones. But on my phone it did not trigger. No matter what. On my desktop, I can resize screen to be 319px wide and it would work. But not onmy mobile phone.</p>
+            <p>Google came to help me, and now I know the importance of the meta tag in the HTML file, something like:</p>
+            <pre>
+                <code>{'<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">'}</code>
+            </pre>
         </>
     },
     {
@@ -182,13 +176,15 @@ keywords = keywords.filter((val: String, idx: Number, arr) => {
 const App = () => {
 
     // selected topic
-    const [section, setSection] = useState('Code Journal');
+    const [section, setSection] = useState('Home');
     // selected topic
     const [topic, setTopic] = useState('');
     // entries matching selected topic
     const [filteredEntries, setFilteredEntries] = useState(entries);
     // hide banner
     const [showBanner, setShowBanner] = useState(true);
+    // navbar size
+    const [isCollapseNavbar, setIsCollapseNavbar] = useState(true);
 
     // filter entries if topic selected
     useEffect(() => {
@@ -217,27 +213,30 @@ const App = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.left}>
-                <Navbar keywords={keywords} onTopicChange={setTopic} section_={section} onSectionChange={setSection} />
+            <div className={`${styles.left} ${isCollapseNavbar ? styles['left-nvcollapsed'] : styles['left-nvexpanded']}`}>
+                <Navbar keywords={keywords} onTopicChange={setTopic} section_={section} onSectionChange={setSection} onNavbarCollapse={setIsCollapseNavbar} />
             </div>
-            <div className={styles.right}>
+            <div className={`${styles.right} ${isCollapseNavbar ? styles['right-nvcollapsed'] : styles['right-nvexpanded']}`}>
                 {showBanner && <div className={styles.wip}>
-                    <div>
-                        <p>Hey There!</p>
-                        <p style={{ marginBottom: 0, paddingLeft: '1rem' }}>This page is not yet finished 😳</p>
-                        <p style={{ marginTop: 5, paddingLeft: '1rem' }}>I am migrating the <i>Code Journal</i> from this <a target={'_blank'} href='https://github.com/franciscocgue/my-journey'>Github repo</a> and adding new sections</p>
-                    </div>
-                    <div className={styles['wip-img']}>
-                        <img height={110} width={110} src={wip} />
-                    </div>
                     <span className={styles.close} onClick={() => setShowBanner(false)}>&times;</span>
+                    <div className={styles['wip-inner']}>
+                        <div>
+                            <p>Hey There!</p>
+                            <p style={{ marginBottom: 0, paddingLeft: '1rem' }}>This page is not yet finished 😳</p>
+                            <p style={{ marginTop: 5, paddingLeft: '1rem' }}>I am migrating the <i>Code Journal</i> from this <a target={'_blank'} href='https://github.com/franciscocgue/my-journey'>Github repo</a> and adding new sections</p>
+                        </div>
+                        <div className={styles['wip-img']}>
+                            <img height={110} width={110} src={wip} />
+                        </div>
+                    </div>
                 </div>}
-                {!showBanner && <div className={styles.wip}>
+                {!showBanner && <div className={`${styles['wip-inner']} ${styles['wip']}`}>
                     <span className={styles['msg-hidden']} onClick={() => setShowBanner(true)}>Click to see message</span>
                 </div>}
                 {section === 'Code Journal' && filteredEntries && filteredEntries.map((entry, idx) => <Entry key={entry.title + entry.date + idx} date={entry.date} title={entry.title} summary={entry.summary} >{entry.content}</Entry>)}
-                {section === 'Home' && <div></div>}
-                {section === 'Curriculum' && <div></div>}
+                {section === 'Home' && <div>
+                    <Home />
+                </div>}
                 {section === 'Hobby Projects' && <div></div>}
             </div>
         </div>

@@ -2,7 +2,6 @@
     padding: 1rem;
     margin: 0;
     width: 100%;
-    height: fit-content;
     top: 0;
     left: 0;
     height: 100vh;
@@ -25,6 +24,26 @@
 
 .container ul li {
     width: 100%;
+}
+
+.container .menu-icon {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.collapsed {
+    display: block;
+}
+
+.selection {
+    display: none;
+}
+
+.hide-menu {
+    display: none;
 }
 
 .container .section button {
@@ -101,4 +120,22 @@
 .container .topics p.highlight-topic {
     color: white;
     /* font-weight: bolder; */
+}
+
+@media only screen and (max-width:600px) {
+    /* phones */
+
+    .container {
+        /* height: 100vh; */
+        height: fit-content;
+        width: 100vw;
+    }
+
+    .collapsed {
+        display: none;
+    }
+
+    .selection {
+        display: inline;
+    }
 }

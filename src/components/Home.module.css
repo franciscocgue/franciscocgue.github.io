@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;700&display=swap');
+
+.container {
+    margin: 0.5rem 0rem 1.5rem 0rem;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    gap: 1.7rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    width: 125px;
+}
+
+.intro {
+    /* min-width: 500px; */
+    flex: 3 1 500px;
+    max-width: 100%;
+}
+
+.intro h3 {
+    margin-top: 0;
+}
+
+.intro ul {
+    list-style: none;
+}
+
+.container p,
+.container li,
+.container div {
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.intro .img {
+    margin: 0 5px;
+    height: 20px;
+    margin-bottom: -3px;
+    margin-top: 2px;
+}
+
+.container .content {
+    font-size: 1rem;
+    /* font-family: 'Lora', serif; */
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.timeline img {
+    border: 1px solid grey;
+    border-radius: 7px;
+}
