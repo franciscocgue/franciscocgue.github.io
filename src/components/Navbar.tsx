@@ -49,7 +49,7 @@ const Navbar = ({ keywords, onTopicChange, section_, onSectionChange, onNavbarCo
         } else {
             setFiltered([]);
         }
-    }, [search]);
+    }, [search, section]);
 
     // on search value changed
     const onChangeHandler = (e: any) => {
@@ -60,7 +60,7 @@ const Navbar = ({ keywords, onTopicChange, section_, onSectionChange, onNavbarCo
         <nav className={styles.container}>
             <div className={styles['menu-icon']}>
                 <span onClick={(e) => { setIsCollapseNavbar(prev => !prev) }}><GiHamburgerMenu /></span>
-                {isCollapseNavbar && <span className={styles.selection}>{section}</span>}
+                {isCollapseNavbar && <span className={styles.selection} onClick={(e) => { setIsCollapseNavbar(prev => !prev) }}>{section}</span>}
             </div>
             <div className={`${styles.content} ${isCollapseNavbar ? styles.collapsed : ''}`}>
                 <ul>
@@ -70,6 +70,7 @@ const Navbar = ({ keywords, onTopicChange, section_, onSectionChange, onNavbarCo
                             onSectionChange('Home');
                             onTopicChange('');
                             setTopic('');
+                            setSearch('');
                         }
                         }>
                             <span><AiOutlineHome /></span><span className={`${isCollapseNavbar ? styles['hide-menu'] : ''}`}>Home</span>
@@ -81,6 +82,7 @@ const Navbar = ({ keywords, onTopicChange, section_, onSectionChange, onNavbarCo
                         onSectionChange('Curriculum');
                         onTopicChange('');
                         setTopic('');
+                        setSearch('');
                     }
                     }>
                         <span><CgProfile /></span><span>Curriculum</span>
@@ -92,6 +94,7 @@ const Navbar = ({ keywords, onTopicChange, section_, onSectionChange, onNavbarCo
                             onSectionChange('Hobby Projects');
                             onTopicChange('');
                             setTopic('');
+                            setSearch('');
                         }
                         }>
                             <span><BiGame /></span><span className={`${isCollapseNavbar ? styles['hide-menu'] : ''}`}>Hobby Projects</span>
@@ -103,6 +106,7 @@ const Navbar = ({ keywords, onTopicChange, section_, onSectionChange, onNavbarCo
                             onSectionChange('Code Journal');
                             onTopicChange('');
                             setTopic('');
+                            setSearch('');
                         }
                         }>
                             <span><BsJournalCode /></span><span className={`${isCollapseNavbar ? styles['hide-menu'] : ''}`}>Code Journal</span>

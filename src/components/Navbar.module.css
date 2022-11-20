@@ -32,6 +32,8 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .collapsed {
@@ -137,5 +139,6 @@
 
     .selection {
         display: inline;
+        cursor: pointer;
     }
 }

@@ -21,6 +21,7 @@ const Home = () => {
                 </div>
                 <div className={styles.intro}>
                     <h3>Welcome !</h3>
+                    <p className={styles['border-light-top-bottom']}><b>TL;DR</b> - this site was created for <b>fun</b>, to have some extra <b>coding practice</b>, and keep a <b>code diary</b> 😄</p>
                     <p>As an engineer my first contact with programmation was <i>Matlab</i>. Then, wanting to automate something, I met <img className={styles.img} src={python} />, with <a target='_blank' href="https://automatetheboringstuff.com/">Automate the Boring Stuff</a>. Then I had the opportunity to use <i>Flask</i> to create simple web applications. That was followed by <i>databases</i> and <i>SCADA application</i>, and later <i>web development</i>.</p>
                     <p>All that time I felt fascination for programming. How some thinking can be transformed to perform tasks, automate processes, create beautiful UIs... just fascinating. One afternoon I was wondering 🤔</p>
                     <ul>
@@ -41,7 +42,7 @@ const Home = () => {
                 </div>
             </div>
             <div className={styles.content}>
-                <p style={{ paddingBottom: '1rem', marginBottom: '1rem' }}>But I am not starting at the beginning of the journey, so what happens until now...</p>
+                <p style={{ paddingBottom: '1rem', marginBottom: '1rem' }}>But I am not starting at the beginning of the journey, so what happened until then...</p>
                 <div className={styles.timeline}>
                     <img width='100%' src={timeline} />
                 </div>

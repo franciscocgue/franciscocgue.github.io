@@ -51,4 +51,18 @@
 .timeline img {
     border: 1px solid grey;
     border-radius: 7px;
+    max-height: calc(100vh - 1rem);
+    max-width: 918px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+}
+
+.border-light-top-bottom {
+    width: fit-content;
+    padding: 0.4rem 0;
+    border-top: 1px solid rgb(222, 222, 222);
+    border-bottom: 1px solid rgb(222, 222, 222);
 }
