@@ -38,7 +38,7 @@ const Home = () => {
                             <BsCheckLg /> and how to have a <i>history</i> for found and solved code issues?
                         </li>
                     </ul>
-                    <p>After come research I found what I needed: <b>Hobby Projects</b> and a <b>Code Journal</b>. AWS and GitHub Pages gave the final touch.</p>
+                    <p>After some googling I found what I needed: <b>Hobby Projects</b> and a <b>Code Journal</b>. AWS and GitHub Pages gave the final touch.</p>
                 </div>
             </div>
             <div className={styles.content}>
