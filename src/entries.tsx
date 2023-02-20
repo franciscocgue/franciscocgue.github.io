@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './App.module.css';
-import {EntryType} from './types';
+import { EntryType } from './types';
 
-const chessGameUrl = 'http://chessalb-1072294051.eu-central-1.elb.amazonaws.com/chess';
+const chessGameUrl = 'http://chessalb-1072294051.eu-central-1.elb.amazonaws.com';
 
 let entries: EntryType[];
 entries = [
@@ -43,12 +43,12 @@ entries = [
         summary: 'Snapshot testing with Jest',
         keywords: ['Jest - snapshot testing'],
         content: <>
-        <p>Today I added the 'turns' or 'goes' feasture to the chess game, so that a player cannot move twice in a row. Then I wanted to have a peak into testing, with which I was barely familar.</p>
-        <p>After some initial reading and some recalling, there are several testing types: unit tests and integration (whose threshold in React components is vague). Also quite simplified, one can use React-Testing-Library and / or Jest. There are of course other options we could use.</p>
-        <p>In this first contact with React testing (let's be honest, with testing), I am using just Jest. Not having created the project with CRA, I had to fight some initial setup, including some new devDependencies (<i>react-test-rendered, jest, babel-jest and @babel/preset-typescript, ts-jest</i>). Last two added due to having TypeScript files (it seems you cannot import a .ts file into .js, so I had to have .ts test files to be able to import the .tsx components).</p>
-        <p>Using CSS modules also complicated a bit the setup, but <a href='https://jestjs.io/docs/webpack#mocking-css-modules'>Mocking CSS Modules link</a> explains how to do this very gracefully.</p>
-        <p>So it was an interesting setup, but in the end, as usually, it paid off. I added the most simple test file for a Cell rendering (in the Chess board). I run <code className={styles.code}>npm test</code>, which calls <code className={styles.code}>jest</code> command. It passed the (snapshot) test. Then I made a mistake (on purpose, of course) in which a white cell gets a class for a black one. I run the test again and it fail the test! Wonderfull. It even detailed why it failed: class had changed. And this is how snapshot tests work, they compare the current snapshot to a previous (even commited) one. Really cool.</p>
-        <p>This is great to get started into more serious testing, and having a way to make sure any refractoring does not change the rendered components.</p>
+            <p>Today I added the 'turns' or 'goes' feasture to the chess game, so that a player cannot move twice in a row. Then I wanted to have a peak into testing, with which I was barely familar.</p>
+            <p>After some initial reading and some recalling, there are several testing types: unit tests and integration (whose threshold in React components is vague). Also quite simplified, one can use React-Testing-Library and / or Jest. There are of course other options we could use.</p>
+            <p>In this first contact with React testing (let's be honest, with testing), I am using just Jest. Not having created the project with CRA, I had to fight some initial setup, including some new devDependencies (<i>react-test-rendered, jest, babel-jest and @babel/preset-typescript, ts-jest</i>). Last two added due to having TypeScript files (it seems you cannot import a .ts file into .js, so I had to have .ts test files to be able to import the .tsx components).</p>
+            <p>Using CSS modules also complicated a bit the setup, but <a href='https://jestjs.io/docs/webpack#mocking-css-modules'>Mocking CSS Modules link</a> explains how to do this very gracefully.</p>
+            <p>So it was an interesting setup, but in the end, as usually, it paid off. I added the most simple test file for a Cell rendering (in the Chess board). I run <code className={styles.code}>npm test</code>, which calls <code className={styles.code}>jest</code> command. It passed the (snapshot) test. Then I made a mistake (on purpose, of course) in which a white cell gets a class for a black one. I run the test again and it fail the test! Wonderfull. It even detailed why it failed: class had changed. And this is how snapshot tests work, they compare the current snapshot to a previous (even commited) one. Really cool.</p>
+            <p>This is great to get started into more serious testing, and having a way to make sure any refractoring does not change the rendered components.</p>
         </>
     },
     {
@@ -57,15 +57,15 @@ entries = [
         summary: 'From printing to actual debugging',
         keywords: ['Debugging'],
         content: <>
-        <p>Todays learnings are as short as they are nice. And they are very short. A few weeks ago I deciding if buying a book whose title I do not remember, but it was something like <i>How to program</i> less <i>bad</i>. At the beginning there were a few questions, aiming for the reader to realize if the book was suitable or not. One of the questions was "How do you debug?". There where three possible anwers:</p>
-        <ul>
-            <li>Who needs debugging anyway, the user will just inform about the bugs</li>
-            <li>I print / log everything to the console</li>
-            <li>I use a debugging tool</li>
-        </ul>
-        <p>We will skip the first answer (clearly the correct one). The last one did not actually say 'debugging tools', but some actual tool whose name I do not remember. My case is the second one, I tend to print (console.log / print) eeeeeverything when I want to debug. Efficient, uh?</p>
-        <p>Well today printing was not enough, so I decided to take the step. I went to Google and typed 'react vscode debugging'.</p>
-        <p>I can only say it is awesome. Not only the potential, but also how easy it was, how simple it is to watch specific variables, etc. It reminds me to debugging in Matlab, back in the university when I had a single file (or a few anyway), and all was nice and sequential. I was afraid of how this would be in a React aüpplication, but it ended up being quite a nice experience.</p>
+            <p>Todays learnings are as short as they are nice. And they are very short. A few weeks ago I deciding if buying a book whose title I do not remember, but it was something like <i>How to program</i> less <i>bad</i>. At the beginning there were a few questions, aiming for the reader to realize if the book was suitable or not. One of the questions was "How do you debug?". There where three possible anwers:</p>
+            <ul>
+                <li>Who needs debugging anyway, the user will just inform about the bugs</li>
+                <li>I print / log everything to the console</li>
+                <li>I use a debugging tool</li>
+            </ul>
+            <p>We will skip the first answer (clearly the correct one). The last one did not actually say 'debugging tools', but some actual tool whose name I do not remember. My case is the second one, I tend to print (console.log / print) eeeeeverything when I want to debug. Efficient, uh?</p>
+            <p>Well today printing was not enough, so I decided to take the step. I went to Google and typed 'react vscode debugging'.</p>
+            <p>I can only say it is awesome. Not only the potential, but also how easy it was, how simple it is to watch specific variables, etc. It reminds me to debugging in Matlab, back in the university when I had a single file (or a few anyway), and all was nice and sequential. I was afraid of how this would be in a React aüpplication, but it ended up being quite a nice experience.</p>
         </>
     },
     {
@@ -146,6 +146,43 @@ entries = [
             <p>If instead of <i>useState</i> we use <i>useReducer</i> in the store, logic would be more 'organized', since instead of defining the actions as functions or handlers in the store object, we could use a single (reducer) function.</p>
             <p>In any case, I never used Redux in an application <i>yet</i>
                 , all this is based on some reading. So that is of course the next step!</p>
+        </>
+    },
+
+    {
+        date: '2023-01-29',
+        title: 'Deploying in AWS',
+        summary: 'Deploying Chessdrez on Amazon EC2',
+        keywords: ['Hobby Project', 'Deploy', 'Hosting', 'AWS - EC2'],
+        content: <>
+            <p>This post is actually from a while ago (around half a year). It has some notes on the steps I followed to deploy Chessdrez in AWS. Including setting up the EC2 instance, SSH-logging into it, cloning the GitHub project from within, and running the package.json NPM commands to install dependancies and build the application.</p>
+            <p>And something I recently found. The EC2 instance I selected is... let's say, not the most expensive we could have selected. This trabnslates into the 'npm run build' not even be able to execute sometimes (most of the times actually). After many attempts I realized there is no reason to have the full project in the iunstance, but only the dist folder. FileZilla offered a superb experience when moving these files from local to cloud intance.</p>
+            <ul>
+                <li>Who needs debugging anyway, the user will just inform about the bugs</li>
+                <li>I print / log everything to the console</li>
+                <li>I use a debugging tool</li>
+            </ul>
+            <p>We will skip the first answer (clearly the correct one). The last one did not actually say 'debugging tools', but some actual tool whose name I do not remember. My case is the second one, I tend to print (console.log / print) eeeeeverything when I want to debug. Efficient, uh?</p>
+            <p>Well today printing was not enough, so I decided to take the step. I went to Google and typed 'react vscode debugging'.</p>
+            <p>I can only say it is awesome. Not only the potential, but also how easy it was, how simple it is to watch specific variables, etc. It reminds me to debugging in Matlab, back in the university when I had a single file (or a few anyway), and all was nice and sequential. I was afraid of how this would be in a React aüpplication, but it ended up being quite a nice experience.</p>
+        </>
+    },
+
+
+    {
+        date: '2023-02-20',
+        title: 'Asynchronous programming',
+        summary: 'Cancelling requests',
+        keywords: ['Asynchronous actions', 'Promises'],
+        content: <>
+            <p>Lets imagine we need to cancell or kill a request, having some sort of timeout. There are many options for this, which made me think this is complex. Some of these options:</p>
+            <ul>
+                <li>Define some middleware on the server side (Express middleware or custom)</li>
+                <li>Set the timeout in Node via <code className={styles.code}>server.setTimeout(someTimeInMs)</code></li>
+                <li>Using the <i>signal</i> parameter in the <i>fetch</i> method (<a href='https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request' target={'_blank'}>SO link</a>)</li>
+            </ul>
+            <p>To be honest I did not look (yet) into these methods in detail, specially the last one. I also did not test what happens to a request once it is cancelled: does the server know it is cancelled if it was done from the client? If it was a database data fetch request, does whatever we are using to access the DB in the server side as part of the route endpoint tells the DB to stop the query?</p>
+            <p>In any case, I found it simplest to combine a Promise that resolves automatically in X seconds (X is our timeout threshold), and then <code className={styles.code}>Promise.race()</code>, optionally together with <code className={styles.code}>Promise.all()</code>. This Promise-based solution is really simple and effective.</p>
         </>
     },
 ]
