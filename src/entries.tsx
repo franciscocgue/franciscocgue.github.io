@@ -155,16 +155,18 @@ entries = [
         summary: 'Deploying Chessdrez on Amazon EC2',
         keywords: ['Hobby Project', 'Deploy', 'Hosting', 'AWS - EC2'],
         content: <>
-            <p>This post is actually from a while ago (around half a year). It has some notes on the steps I followed to deploy Chessdrez in AWS. Including setting up the EC2 instance, SSH-logging into it, cloning the GitHub project from within, and running the package.json NPM commands to install dependancies and build the application.</p>
-            <p>And something I recently found. The EC2 instance I selected is... let's say, not the most expensive we could have selected. This trabnslates into the 'npm run build' not even be able to execute sometimes (most of the times actually). After many attempts I realized there is no reason to have the full project in the iunstance, but only the dist folder. FileZilla offered a superb experience when moving these files from local to cloud intance.</p>
-            <ul>
-                <li>Who needs debugging anyway, the user will just inform about the bugs</li>
-                <li>I print / log everything to the console</li>
-                <li>I use a debugging tool</li>
-            </ul>
-            <p>We will skip the first answer (clearly the correct one). The last one did not actually say 'debugging tools', but some actual tool whose name I do not remember. My case is the second one, I tend to print (console.log / print) eeeeeverything when I want to debug. Efficient, uh?</p>
-            <p>Well today printing was not enough, so I decided to take the step. I went to Google and typed 'react vscode debugging'.</p>
-            <p>I can only say it is awesome. Not only the potential, but also how easy it was, how simple it is to watch specific variables, etc. It reminds me to debugging in Matlab, back in the university when I had a single file (or a few anyway), and all was nice and sequential. I was afraid of how this would be in a React aüpplication, but it ended up being quite a nice experience.</p>
+            <p>Around half a year ago, I deployed my <a target='_blank' href={chessGameUrl}>Chessdrez application</a> in AWS. Roughly, main steps were:</p>
+            <ol>
+                <li>Setting up the ECS instance</li>
+                <li>SSH-logging into the instace</li>
+                <li>Cloning the GitHub project from within the instance</li>
+                <li><code className={styles.code}>npm install</code>ing dependencies</li>
+                <li><code className={styles.code}>npm build</code>ing the application</li>
+                <li>running the application</li>
+            </ol>
+            <p>One of the <b>issues</b> I faced were resources. The EC2 instance I chose is... let's say it is not the most expensive and powerful I could have selected. This meant that most of the times <code className={styles.code}>npm run build</code> was not even able to execute.</p>
+            <p>The <b>solution</b> came just recently. I realized there is no actual need to have the whole project folder (cloned from GitHub) in the instance! The <i>dist</i> folder, where the bundle is, and thge server-side code is enough. In fact, the server side could be removed, but I like it there. <a href='https://filezilla-project.org/' target={`_blank`}>FileZilla</a> offered a superb experience when moving these files from local to the cloud intance.</p>
+            <p>Since then, promoting any new featture or fix to the cloud has become a breeze.</p>
         </>
     },
 
