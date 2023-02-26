@@ -177,14 +177,20 @@ entries = [
         summary: 'Cancelling requests',
         keywords: ['Asynchronous actions', 'Promises'],
         content: <>
-            <p>Lets imagine we need to cancell or kill a request, having some sort of timeout. There are many options for this, which made me think this is complex. Some of these options:</p>
+            <p>Lets imagine we need to cancell a request, for example with a timeout. There are many options for this, some of which are:</p>
             <ul>
                 <li>Define some middleware on the server side (Express middleware or custom)</li>
                 <li>Set the timeout in Node via <code className={styles.code}>server.setTimeout(someTimeInMs)</code></li>
                 <li>Using the <i>signal</i> parameter in the <i>fetch</i> method (<a href='https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request' target={'_blank'}>SO link</a>)</li>
             </ul>
-            <p>To be honest I did not look (yet) into these methods in detail, specially the last one. I also did not test what happens to a request once it is cancelled: does the server know it is cancelled if it was done from the client? If it was a database data fetch request, does whatever we are using to access the DB in the server side as part of the route endpoint tells the DB to stop the query?</p>
-            <p>In any case, I found it simplest to combine a Promise that resolves automatically in X seconds (X is our timeout threshold), and then <code className={styles.code}>Promise.race()</code>, optionally together with <code className={styles.code}>Promise.all()</code>. This Promise-based solution is really simple and effective.</p>
+            <p>To be honest I did not look (yet) into these methods in detail. But I focused on a fourth one: <code className={styles.code}>Promise.race()</code>. 
+            This method is given an array of promises, and it will settle when the quickest promise settles. 
+            One of these promises can be a promise that we know will settle after X seconds (X being the timeout).</p>
+            
+           <p>This can be combined with <code className={styles.code}>Promise.all()</code>, so that we can send multiple request as a group (we want all of them to settle), but will time out if needed. This Promise-based solution is really simple and effective to time out long database fetches.</p>
+           <h4><span style={{fontSize:'150%'}}>🤓</span> Edit:</h4>
+           <p>I was wondering what happens to requests, after they are cancelled. I read a bit and set a simple sample project (html file + minimal Node backend with some routes). Basically, since we are dealing with HTTP requests, andf HTTP is stateless, the API will not know a request was cancelled, and it will continue to execute.</p>
+           <p>This question showed me that, not unlike Jon Snow, I know nothing. So I end up enrolling in a Udemy course about APIs</p>
         </>
     },
 ]
