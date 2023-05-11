@@ -183,14 +183,27 @@ entries = [
                 <li>Set the timeout in Node via <code className={styles.code}>server.setTimeout(someTimeInMs)</code></li>
                 <li>Using the <i>signal</i> parameter in the <i>fetch</i> method (<a href='https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request' target={'_blank'}>SO link</a>)</li>
             </ul>
-            <p>To be honest I did not look (yet) into these methods in detail. But I focused on a fourth one: <code className={styles.code}>Promise.race()</code>. 
-            This method is given an array of promises, and it will settle when the quickest promise settles. 
-            One of these promises can be a promise that we know will settle after X seconds (X being the timeout).</p>
-            
-           <p>This can be combined with <code className={styles.code}>Promise.all()</code>, so that we can send multiple request as a group (we want all of them to settle), but will time out if needed. This Promise-based solution is really simple and effective to time out long database fetches.</p>
-           <h4><span style={{fontSize:'150%'}}>🤓</span> Edit:</h4>
-           <p>I was wondering what happens to requests, after they are cancelled. I read a bit and set a simple sample project (html file + minimal Node backend with some routes). Basically, since we are dealing with HTTP requests, andf HTTP is stateless, the API will not know a request was cancelled, and it will continue to execute.</p>
-           <p>This question showed me that, not unlike Jon Snow, I know nothing. So I end up enrolling in a Udemy course about APIs</p>
+            <p>To be honest I did not look (yet) into these methods in detail. But I focused on a fourth one: <code className={styles.code}>Promise.race()</code>.
+                This method is given an array of promises, and it will settle when the quickest promise settles.
+                One of these promises can be a promise that we know will settle after X seconds (X being the timeout).</p>
+
+            <p>This can be combined with <code className={styles.code}>Promise.all()</code>, so that we can send multiple request as a group (we want all of them to settle), but will time out if needed. This Promise-based solution is really simple and effective to time out long database fetches.</p>
+            <h4><span style={{ fontSize: '150%' }}>🤓</span> Edit:</h4>
+            <p>I was wondering what happens to requests, after they are cancelled. I read a bit and set a simple sample project (html file + minimal Node backend with some routes). Basically, since we are dealing with HTTP requests, andf HTTP is stateless, the API will not know a request was cancelled, and it will continue to execute.</p>
+            <p>This question showed me that, not unlike Jon Snow, I know nothing. So I end up enrolling in a Udemy course about APIs</p>
+        </>
+    },
+    {
+        date: '2023-05-11',
+        title: '"this" value',
+        summary: 'array vs normal JS functions',
+        keywords: ['JavaScript', 'JS', 'JavaScript - this', 'JavaScript - functions', 'JavaScript - arrow functions'],
+        content: <>
+            <p>A few days ago I was learning OpenUI5, and I (surprise) had an error. After some investigation I realized it was due to using <i>arrow functions</i> instead of the "normal" JS functions. And specifically, with the way these two functions define the <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this' target='_blank'>this</a> value when created as methods inside an object.</p>
+            <p>Todays entry will not exhaustively describe <i>this</i> (for that, the web is always a better option), but rather focus on the difference between its use in arrow and in normal JS functions. And more specifically, in objects.</p>
+            <p>In the <b>first "test"</b>, I created <b>two functions</b>, one normal and one arrow function. Both just print <i>this</i> to the console. <b>In both cases we observe the <i>window</i> object.</b></p>
+            <p>In the <b>second one</b>, I created an <b>object with two method</b> (that is, two functions). One is an arrow function, the other a normal one. Both simply print the value <i>this</i> into the console. <b>For the normal function, the actual object to which the method belongs is printed. The arrow function, on the other hand, prints the <i>window</i> object.</b></p>
+            <p><b>Conclusion: </b>when working with OpenUI5, normal functions are preferred. This might not apply always though, and will surely depend on where the function is used and defined (inside an object or not, for example).</p>
         </>
     },
 ]
