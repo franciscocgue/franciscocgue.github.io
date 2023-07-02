@@ -1,0 +1,23 @@
+.container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    font-size: 2.5vmin;
+    color: white;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.container .options {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container a {
+    color: rgb(146, 195, 255);
+}

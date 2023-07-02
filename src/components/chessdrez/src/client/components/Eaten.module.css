@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid rgb(198, 198, 198);
+    font-size: 2.5rem;
+    font-weight: 500;
+    animation: eaten 1s;
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes eaten {
+    0% {background-color: white;}
+    50% {background-color: red;}
+    100% {background-color: white;}
+}
+
+/* .container-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgb(198, 198, 198);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(198, 198, 198);
+} */
+
+.icon-img-peon {
+    height:55%;
+}
+.icon-img-caballo {
+    height: 65%;
+}
+.icon-img-torre {
+    height: 65%;
+}
+.icon-img-alfil {
+    height: 75%;
+}
+.icon-img-reina {
+    height: 85%;
+}
+.icon-img-rey {
+    height: 85%;
+}

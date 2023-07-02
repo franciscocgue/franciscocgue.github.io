@@ -1,0 +1,50 @@
+.container {
+    position: sticky;
+    top: 0;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    margin: 0;
+    z-index: 11;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 8vmin;
+    /* if height changes, change Board.module.css */
+    justify-content: flex-start;
+}
+
+.container .logo {
+    height: 100%;
+    margin: auto 2rem auto auto;
+}
+
+.container div {
+    list-style-type: none;
+    margin: auto 2rem;
+    cursor: pointer;
+    font-size: min(3.5vmin, 1.5rem);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container a {
+    display: inline-block;
+    align-self: center;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    outline: none;
+}
+
+.active {
+    /* font-weight: bold; */
+    background-color: rgb(95, 95, 95);
+}
+
+@media (max-width:800px) {
+    .container div {
+        margin: auto 0.5rem;
+    }
+}

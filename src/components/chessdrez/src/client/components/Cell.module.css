@@ -1,0 +1,124 @@
+.cell {
+    /* https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
+    /* width: calc(100% / 8); */
+    height: calc(100% / 8);
+    width: calc(100% / 8);
+    /* height: var(--cell-width);
+    width: var(--cell-width); */
+    /* height: 0; */
+    /* padding-bottom: calc(100% / 8); */
+    border: 1px solid rgb(235, 235, 235);
+    z-index: 9;
+}
+
+.white {
+    background-color: #ffe4c4;
+}
+
+.black {
+    background-color: #498346;
+}
+
+.cell:hover {
+    /* border: 3px solid orange; */
+    /* background-color: rgb(255, 168, 7, 0.5); */
+    box-shadow: 0 0 5px 5px rgba(255, 165, 0, 1) inset;
+}
+
+.last-move {
+    box-shadow: 0 0 0 100px #7c9dff inset;   
+}
+
+.shadow {
+    box-shadow: 0 0 0 100px #ffa500 inset;
+}
+
+.king-checked {
+    box-shadow: 0 0 0 100px rgb(255, 0, 0) inset;
+}
+
+.checked-by {
+    box-shadow: 0 0 0 100px rgb(0, 68, 255) inset;
+}
+
+.icon-white {
+    margin: auto;
+    display: block;
+    /* @TODO: change 'font-size' with media query if board is 100% of width*/
+    font-size: 4vw; 
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    height: 100%;
+}
+
+.icon-black {
+    margin: auto;
+    display: block;
+    /* @TODO: change 'font-size' with media query if board is 100% of width*/
+    font-size: 4vw; 
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    height: 100%;
+}
+
+.draggable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.draggable:active {
+    cursor: grabbing;
+}
+
+.cell-content {
+    position: relative;
+    height: 100%;
+}
+
+.cell-row {
+    font-size: 2vmin;
+    color: rgb(60, 60, 60);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.cell-col {
+    font-size: 2vmin;
+    color: rgb(60, 60, 60);
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+
+.icon-img-peon {
+    height:55%;
+}
+.icon-img-caballo {
+    height: 65%;
+}
+.icon-img-torre {
+    height: 65%;
+}
+.icon-img-alfil {
+    height: 75%;
+}
+.icon-img-reina {
+    height: 85%;
+}
+.icon-img-rey {
+    height: 85%;
+}
+
+@media (max-width: 1000px) {
+    .icon{
+        font-size: 7vmin; 
+    }
+}
