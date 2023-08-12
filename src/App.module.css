@@ -17,6 +17,10 @@ body {
     padding: 0.5rem 0.5rem 0.1rem 0.5rem;
     background-color: #fde4b9;
     border-radius: 9px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
 }
 
 .wip-inner {
@@ -42,6 +46,11 @@ body {
 .msg-hidden {
     cursor: pointer;
     width: 100%;
+}
+
+.wip-hidden {
+    background-color: #fde4b9d3;
+    color: rgba(0, 0, 0, 0.664);
 }
 
 @keyframes rotation {

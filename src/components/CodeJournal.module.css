@@ -1,0 +1,33 @@
+.container {
+    padding: 2rem;
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+
+.container-nvcollapsed {
+    width: calc(100vw - 60px);
+}
+
+.container-nvexpanded {
+    width: 77vw;
+}
+
+@media only screen and (max-width:600px) {
+    /* phones */
+
+    .container {
+        /* height: 100vh; */
+        width: 100vw;
+        width: 100vw;
+        height: fit-content;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    /* .wip-inner {
+        flex-direction: column;
+    } */
+}

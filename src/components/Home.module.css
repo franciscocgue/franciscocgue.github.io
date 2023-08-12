@@ -2,6 +2,29 @@
 
 .container {
     margin: 0.5rem 0rem 1.5rem 0rem;
+    padding: 2rem;
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+
+/* .container .right {
+    padding: 2rem;
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    height: 100vh;
+} */
+
+.container-nvcollapsed {
+    width: calc(100vw - 60px);
+}
+
+.container-nvexpanded {
+    width: 77vw;
 }
 
 .top {
@@ -65,4 +88,22 @@
     padding: 0.4rem 0;
     border-top: 1px solid rgb(222, 222, 222);
     border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+
+@media only screen and (max-width:600px) {
+    /* phones */
+
+    .container {
+        /* height: 100vh; */
+        width: 100vw;
+        width: 100vw;
+        height: fit-content;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    /* .wip-inner {
+        flex-direction: column;
+    } */
 }

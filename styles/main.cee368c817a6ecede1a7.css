@@ -1,0 +1,1502 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/Entry.module.css ***!
+  \***************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;700&display=swap);
+/*!**************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/App.module.css ***!
+  \**************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Kalam&display=swap);
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/Home.module.css ***!
+  \**************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;700&display=swap);
+/*!*************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/ui/Card.module.css ***!
+  \*************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Kalam&display=swap);
+/*!**********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Game.module.css ***!
+  \**********************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Koulen&display=swap);
+/*!*****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/ui/Dialogue.module.css ***!
+  \*****************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap);
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/Entry.module.css (1) ***!
+  \*******************************************************************************************************************/
+.Entry-module_container_eFe7l {
+    border: 1px solid grey;
+    margin: 0.5rem 0rem 1.5rem 0rem;
+    padding: 0 0rem 0.2rem 0rem;
+    border-radius: 7px;
+    max-width: 100%;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ {
+    background-color: rgb(17, 17, 29);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ h3 {
+    margin: 0;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ .Entry-module_title_iSQbu {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family:"Segoe UI",Arial,sans-serif; */
+    font-weight: 700;
+}
+
+.Entry-module_container_eFe7l .Entry-module_header_MY6MQ .Entry-module_date_yxtjp {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family:"Segoe UI",Arial,sans-serif; */
+    font-weight: 300;
+}
+
+.Entry-module_container_eFe7l .Entry-module_summary_JqV5m {
+    padding: 1rem 1rem 0 1rem;
+    font-style: italic;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.Entry-module_container_eFe7l .Entry-module_content_Pd4Ek {
+    font-size: 1rem;
+    padding: 0 1rem;
+    /* font-family: 'Lora', serif; */
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/App.module.css (1) ***!
+  \******************************************************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    min-width: 300px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.App-module_wip_GMevU {
+    margin: 0rem 0rem 0.8rem 0rem;
+    padding: 0.5rem 0.5rem 0.1rem 0.5rem;
+    background-color: #fde4b9;
+    border-radius: 9px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
+}
+
+.App-module_wip-inner_czMYG {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-family: 'Kalam', cursive;
+}
+
+.App-module_wip-img_xbdQe {
+    display: flex;
+    margin: auto;
+    min-width: calc(110px + 3rem);
+    /* margin: 0 3rem; */
+}
+
+.App-module_wip-img_xbdQe img {
+    position: relative;
+    animation: App-module_rotation_RoG_r 3s infinite linear;
+    margin-bottom: 1rem;
+}
+
+.App-module_msg-hidden_Y0KTY {
+    cursor: pointer;
+    width: 100%;
+}
+
+.App-module_wip-hidden_e3bc2 {
+    background-color: #fde4b9d3;
+    color: rgba(0, 0, 0, 0.664);
+}
+
+@keyframes App-module_rotation_RoG_r {
+    0%   {right: 0}
+    50% {right: 2rem}
+    100% {right: 0}
+}
+
+.App-module_close_rz90E {
+    color: #aaa;
+    float: right;
+    font-size: 32px;
+    height: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+
+.App-module_close_rz90E:hover,
+.App-module_close_rz90E:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.App-module_container_RMIWH {
+    height: fit-content;
+    /* height: 100vh; */
+    width: 100vw;
+}
+
+.App-module_container_RMIWH .App-module_left_ZyUCm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* width: 8vw; */
+    /* width: 23vw; */
+    /* display: none; */
+}
+
+.App-module_container_RMIWH .App-module_right_w0gcr {
+    padding: 2rem;
+    /* width: 92vw; */
+    /* width: 77vw; */
+    position: absolute;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    /* display: none; */
+}
+
+.App-module_left-nvcollapsed_dPztm {
+    width: 60px;
+}
+
+.App-module_right-nvcollapsed_nv2Dd {
+    width: calc(100vw - 60px);
+}
+
+.App-module_left-nvexpanded_OsOps {
+    width: 23vw;
+}
+
+.App-module_right-nvexpanded_WC9ge {
+    width: 77vw;
+}
+
+.App-module_container_RMIWH .App-module_img_ioTff {
+    max-width: 900px;
+    margin: auto;
+}
+
+.App-module_container_RMIWH .App-module_code_p3etx {
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+    padding: 1px 4px;
+    border: 1px solid rgb(184, 184, 184);
+    max-width: 100%;
+}
+
+pre {
+    background-color: rgb(228, 228, 228);
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    margin-left: 1rem;
+    font-size: 80%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+pre code {
+    display: block;
+    max-width: 100%;
+}
+
+.App-module_code-comment_aTyMI {
+    color: rgb(99, 99, 99);
+}
+
+
+@media only screen and (max-width:600px) {
+    /* phones */
+
+    .App-module_container_RMIWH {
+        /* height: 100vh; */
+        width: 100vw;
+    }
+
+    .App-module_container_RMIWH .App-module_left_ZyUCm {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        overflow-y: auto;
+        /* top: 0;
+        right: 0; */
+    }
+    .App-module_container_RMIWH .App-module_right_w0gcr {
+        width: 100vw;
+        height: fit-content;
+        position: relative;
+        overflow-y: auto;
+        /* top: 0;
+        right: 0; */
+    }
+
+    .App-module_wip-inner_czMYG {
+        flex-direction: column;
+    }
+}
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/Navbar.module.css ***!
+  \****************************************************************************************************************/
+.Navbar-module_container_VlUdL {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* position: absolute; */
+    overflow-y: auto;
+    border-right: 2px solid grey;
+    background-color: rgb(17, 17, 29);
+    color: white;
+
+    font-size: 1rem;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.Navbar-module_container_VlUdL ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.Navbar-module_container_VlUdL ul li {
+    width: 100%;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_menu-icon_g_Eob {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.Navbar-module_collapsed_FAsXn {
+    display: block;
+}
+
+.Navbar-module_selection_dpAZB {
+    display: none;
+}
+
+.Navbar-module_hide-menu_cOmxa {
+    display: none;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_section_fpvcz button {
+    font-weight: 600;
+    padding: 0.4rem 0.3rem;
+    margin: 0.2rem 0 0.7rem 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 0.7rem;
+    /* border-bottom: 1px solid rgb(70, 70, 70); */
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    font: inherit;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_section_fpvcz button:hover {
+    /* color: rgb(70, 70, 70);
+    background-color: white; */
+    /* background-color: white;
+    color: black; */
+	border: none;
+	outline: inherit;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_section_fpvcz button.Navbar-module_selected_yan53 {
+    background-color: white;
+    color: black;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_search_E3fRQ {
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    padding: 0.4rem 0.3rem;
+    margin: 0.7rem 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 0.7rem;
+    /* border-bottom: 1px solid rgb(70, 70, 70); */
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_search_E3fRQ div {
+    /* max-width: 100%; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.Navbar-module_search_E3fRQ input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-size: small;}
+
+.Navbar-module_container_VlUdL .Navbar-module_search_E3fRQ .Navbar-module_icon_MtExr {
+    display: inline-block;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_topics_gZZw6 p {
+    padding: 0.3rem 0.3rem 0.3rem 1rem;
+    margin: 0;
+    color: grey;
+    border-bottom: 1px solid grey;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.Navbar-module_container_VlUdL .Navbar-module_topics_gZZw6 p.Navbar-module_highlight-topic_sJqIz {
+    color: white;
+    /* font-weight: bolder; */
+}
+
+@media only screen and (max-width:600px) {
+    /* phones */
+
+    .Navbar-module_container_VlUdL {
+        /* height: 100vh; */
+        height: fit-content;
+        width: 100vw;
+    }
+
+    .Navbar-module_collapsed_FAsXn {
+        display: none;
+    }
+
+    .Navbar-module_selection_dpAZB {
+        display: inline;
+        cursor: pointer;
+    }
+}
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/Home.module.css (1) ***!
+  \******************************************************************************************************************/
+.Home-module_container_g_w3N {
+    margin: 0.5rem 0rem 1.5rem 0rem;
+}
+
+.Home-module_top_FS4Ex {
+    display: flex;
+    flex-direction: row;
+    gap: 1.7rem;
+    flex-wrap: wrap;
+}
+
+.Home-module_badge_xT_Dr {
+    width: 125px;
+}
+
+.Home-module_intro_jGlMM {
+    /* min-width: 500px; */
+    flex: 3 1 500px;
+    max-width: 100%;
+}
+
+.Home-module_intro_jGlMM h3 {
+    margin-top: 0;
+}
+
+.Home-module_intro_jGlMM ul {
+    list-style: none;
+}
+
+.Home-module_container_g_w3N p,
+.Home-module_container_g_w3N li,
+.Home-module_container_g_w3N div {
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.Home-module_intro_jGlMM .Home-module_img_noOFW {
+    margin: 0 5px;
+    height: 20px;
+    margin-bottom: -3px;
+    margin-top: 2px;
+}
+
+.Home-module_container_g_w3N .Home-module_content_BEIda {
+    font-size: 1rem;
+    /* font-family: 'Lora', serif; */
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.Home-module_timeline_r0DYI img {
+    border: 1px solid grey;
+    border-radius: 7px;
+    max-height: calc(100vh - 1rem);
+    max-width: 918px;
+}
+
+.Home-module_timeline_r0DYI {
+    display: flex;
+    justify-content: center;
+}
+
+.Home-module_border-light-top-bottom_SckyS {
+    width: fit-content;
+    padding: 0.4rem 0;
+    border-top: 1px solid rgb(222, 222, 222);
+    border-bottom: 1px solid rgb(222, 222, 222);
+}
+/*!***********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/LinkedInBadge.module.css ***!
+  \***********************************************************************************************************************/
+.LinkedInBadge-module_container_tQDUR {
+    width: 125px;
+    height: 310px;
+    border-radius: 8px;
+    border: 1px solid rgb(233, 229, 223);
+}
+
+.LinkedInBadge-module_header_mEZqi {
+    width: 100%;
+    height: 45px;
+    padding: 12px 1rem 12px 1rem;
+    background-color: rgb(233, 229, 223);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.LinkedInBadge-module_content_RROVv {
+    padding: .8rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.LinkedInBadge-module_logo_Scx8p {
+    width: 84px;
+    height: 21px;
+}
+
+.LinkedInBadge-module_content_RROVv img {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.LinkedInBadge-module_name_wmrLu {
+    font-weight: 600;
+    font-style: 'arial narrow';
+}
+
+.LinkedInBadge-module_link_Q4P77 {
+    display: block;
+    border-radius: 20px;
+    border: 1px solid rgb(42, 42, 255);;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(42, 42, 255);
+    width: fit-content;
+    text-align: center;
+}
+
+.LinkedInBadge-module_link_Q4P77:hover {
+    border: 2px solid rgb(42, 42, 255);;
+    margin-top: calc(1rem - 1px);
+    margin-bottom: calc(1rem - 1px);
+    /* margin-left: -1px;
+    margin-right: -1px; */
+}
+/*!******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/styles.css ***!
+  \******************************************************************************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    min-width: 300px;
+}
+
+.styles_error_zZA8S {
+    font-size: large;
+}
+/*!**********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/App.module.css ***!
+  \**********************************************************************************************************************************/
+.App-module_container_arqzA {
+    width: 100vw;
+    background-color: rgb(43, 43, 43);
+    min-height: 100vh;
+}
+
+.App-module_error_HcvfQ {
+    width: 50%;
+    padding: 1rem;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    text-align: center;
+}
+
+
+/*!************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Navbar.module.css ***!
+  \************************************************************************************************************************************************/
+.Navbar-module_container_M9vZA {
+    position: sticky;
+    top: 0;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    margin: 0;
+    z-index: 11;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 8vmin;
+    /* if height changes, change Board.module.css */
+    justify-content: flex-start;
+}
+
+.Navbar-module_container_M9vZA .Navbar-module_logo_Tu61q {
+    height: 100%;
+    margin: auto 2rem auto auto;
+}
+
+.Navbar-module_container_M9vZA div {
+    list-style-type: none;
+    margin: auto 2rem;
+    cursor: pointer;
+    font-size: min(3.5vmin, 1.5rem);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar-module_container_M9vZA a {
+    display: inline-block;
+    align-self: center;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    outline: none;
+}
+
+.Navbar-module_active_WlUPl {
+    /* font-weight: bold; */
+    background-color: rgb(95, 95, 95);
+}
+
+@media (max-width:800px) {
+    .Navbar-module_container_M9vZA div {
+        margin: auto 0.5rem;
+    }
+}
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/pages/Root.module.css ***!
+  \*****************************************************************************************************************************************/
+.Root-module_container_rqa5m {
+    width: 100vw;
+    background-color: rgb(43, 43, 43);
+    min-height: 100vh;
+}
+/*!**********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Home.module.css ***!
+  \**********************************************************************************************************************************************/
+.Home-module_container_h4Py5 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    font-size: 2.5vmin;
+    color: white;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.Home-module_container_h4Py5 .Home-module_options_VJNFg {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Home-module_container_h4Py5 a {
+    color: rgb(146, 195, 255);
+}
+/*!*****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/ui/Card.module.css (1) ***!
+  \*****************************************************************************************************************************************************/
+.Card-module_container_zE1Ou {
+    border: 2px solid rgb(194, 194, 194);
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    border-style: outset;
+    display: flex;
+    flex-direction: column;
+    width: calc(50vmin);
+    height: calc(50vmin );
+}
+
+.Card-module_scaleup_y2diL {
+    transform: scale(1.06);
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 400ms;
+}
+
+.Card-module_scaledown_ZRj4r {
+    transform: scale(0.9434);
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+}
+
+.Card-module_title_l0EkA {
+    text-align: center;
+    color: black;
+    background-color: rgb(194, 194, 194);
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-family: 'Kalam', cursive;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.Card-module_title_l0EkA h2, .Card-module_title_l0EkA h4 {
+    margin: 0;
+}
+
+.Card-module_content_Q1bem {
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.Card-module_content_Q1bem img {
+    width: calc(50vmin - 2rem);
+    max-width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.Card-module_disabled-img_sih4N {
+    filter: grayscale(100%);
+}
+
+.Card-module_disabled-text_NhRFQ {
+    color: grey;
+}
+
+@media (max-width:1000px) {
+    .Card-module_title_l0EkA h2 {
+        font-size: 5vmin;
+    }
+    .Card-module_title_l0EkA h4 {
+        font-size: 3.7vmin;
+    }
+    .Card-module_container_zE1Ou {
+        width: calc(90vmin);
+    }
+}
+
+/*!**********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Cell.module.css ***!
+  \**********************************************************************************************************************************************/
+.Cell-module_cell_jTAK8 {
+    /* https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
+    /* width: calc(100% / 8); */
+    height: calc(100% / 8);
+    width: calc(100% / 8);
+    /* height: var(--cell-width);
+    width: var(--cell-width); */
+    /* height: 0; */
+    /* padding-bottom: calc(100% / 8); */
+    border: 1px solid rgb(235, 235, 235);
+    z-index: 9;
+}
+
+.Cell-module_white_fXDO_ {
+    background-color: #ffe4c4;
+}
+
+.Cell-module_black_AVzOP {
+    background-color: #498346;
+}
+
+.Cell-module_cell_jTAK8:hover {
+    /* border: 3px solid orange; */
+    /* background-color: rgb(255, 168, 7, 0.5); */
+    box-shadow: 0 0 5px 5px rgba(255, 165, 0, 1) inset;
+}
+
+.Cell-module_last-move_A4E4d {
+    box-shadow: 0 0 0 100px #7c9dff inset;   
+}
+
+.Cell-module_shadow_juOm9 {
+    box-shadow: 0 0 0 100px #ffa500 inset;
+}
+
+.Cell-module_king-checked_C3rbe {
+    box-shadow: 0 0 0 100px rgb(255, 0, 0) inset;
+}
+
+.Cell-module_checked-by_qDaqh {
+    box-shadow: 0 0 0 100px rgb(0, 68, 255) inset;
+}
+
+.Cell-module_icon-white_jeLNI {
+    margin: auto;
+    display: block;
+    /* @TODO: change 'font-size' with media query if board is 100% of width*/
+    font-size: 4vw; 
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    height: 100%;
+}
+
+.Cell-module_icon-black_nyHMz {
+    margin: auto;
+    display: block;
+    /* @TODO: change 'font-size' with media query if board is 100% of width*/
+    font-size: 4vw; 
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    height: 100%;
+}
+
+.Cell-module_draggable_m3yNK {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.Cell-module_draggable_m3yNK:active {
+    cursor: grabbing;
+}
+
+.Cell-module_cell-content_nZUTL {
+    position: relative;
+    height: 100%;
+}
+
+.Cell-module_cell-row_sKssT {
+    font-size: 2vmin;
+    color: rgb(60, 60, 60);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.Cell-module_cell-col_dhKnq {
+    font-size: 2vmin;
+    color: rgb(60, 60, 60);
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+
+.Cell-module_icon-img-peon__MBMb {
+    height:55%;
+}
+.Cell-module_icon-img-caballo_edd5G {
+    height: 65%;
+}
+.Cell-module_icon-img-torre_YxkYN {
+    height: 65%;
+}
+.Cell-module_icon-img-alfil_f3Iaq {
+    height: 75%;
+}
+.Cell-module_icon-img-reina_UCQ7K {
+    height: 85%;
+}
+.Cell-module_icon-img-rey_jHEH5 {
+    height: 85%;
+}
+
+@media (max-width: 1000px) {
+    .Cell-module_icon_DOI57{
+        font-size: 7vmin; 
+    }
+}
+/*!***********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Board.module.css ***!
+  \***********************************************************************************************************************************************/
+.Board-module_board_MVE0v {
+    display: flex;
+    width: min(60vw - 2rem, 100vh - 2rem - 8vmin);
+    height: min(60vw - 2rem, 100vh - 2rem - 8vmin);
+    border: 1px solid gray;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.Board-module_aithinking_qDitH {
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: calc(30% - 25px);
+    /* top: min(calc(60vw / 2 - 2rem  / 2), calc(100vh  / 2 - 2rem  / 2 - 8vmin / 2));
+    left: min(calc(60vw / 2 - 2rem  / 2), calc(100vh  / 2 - 2rem  / 2 - 8vmin / 2)); */
+
+    /* width: min(60vw - 2rem, 100vh - 2rem - 8vmin);
+    height: min(60vw - 2rem, 100vh - 2rem - 8vmin); */
+}
+
+@media (max-width: 1000px) {
+    .Board-module_board_MVE0v {
+        width: min(100vw - 2rem, 100vh - 2rem - 8vmin);
+        height: min(100vw - 2rem, 100vh - 2rem - 8vmin);       
+    }
+
+    .Board-module_aithinking_qDitH {
+        position: absolute;
+        z-index: 10;
+        top: 30%;
+        left: calc(50% - 25px);
+    }
+}
+/*!***********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Eaten.module.css ***!
+  \***********************************************************************************************************************************************/
+.Eaten-module_container_bDEjB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid rgb(198, 198, 198);
+    font-size: 2.5rem;
+    font-weight: 500;
+    animation: Eaten-module_eaten_Uyhnk 1s;
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes Eaten-module_eaten_Uyhnk {
+    0% {background-color: white;}
+    50% {background-color: red;}
+    100% {background-color: white;}
+}
+
+/* .container-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgb(198, 198, 198);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(198, 198, 198);
+} */
+
+.Eaten-module_icon-img-peon_S4uMB {
+    height:55%;
+}
+.Eaten-module_icon-img-caballo_qmijS {
+    height: 65%;
+}
+.Eaten-module_icon-img-torre_yLy7k {
+    height: 65%;
+}
+.Eaten-module_icon-img-alfil_sdQMx {
+    height: 75%;
+}
+.Eaten-module_icon-img-reina_xHEKx {
+    height: 85%;
+}
+.Eaten-module_icon-img-rey_RSfid {
+    height: 85%;
+}
+/*!***************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/EatenOnes.module.css ***!
+  \***************************************************************************************************************************************************/
+.EatenOnes-module_container_vtyH3 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+    /* border: 1px solid white; */
+    /* min-height: calc(3rem + 2px); */
+    width: fit-content;
+}
+
+.EatenOnes-module_row_M2PVF {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*!**************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Game.module.css (1) ***!
+  \**************************************************************************************************************************************************/
+.Game-module_container_kaNuZ {
+    width: 100vw;
+    /* min-height: calc(100vh - 6vmin); */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* gap: 40px; */
+}
+
+.Game-module_board_AjcX9 {
+    padding: 1rem;
+    width: 60%;
+    /* border: 1px solid green; */
+    flex-grow: 2;
+}
+
+.Game-module_info_vg06o {
+    padding: 1rem;
+    width: 40%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    /* max-height: calc(100vh - 8vmin);
+    overflow-y: scroll; */
+}
+
+.Game-module_info-player_rYR8K {
+    margin: 0.5rem;
+    width: calc(100% - 2rem);
+}
+
+.Game-module_history_xUL10 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: white;
+    width: calc(100% - 2rem);
+}
+
+.Game-module_history-btns_qVMhu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 0.5rem 0;
+    padding: 0 0 0 0;
+    /* justify-content: center; */
+}
+
+.Game-module_history-btn_whYzn {
+    background-color: rgb(91, 91, 91);
+    border: 1px solid grey;
+    color: white;
+    outline: none;
+    border-radius: 7px;
+    padding: 0 0.5rem;
+    margin: 0.5rem;
+    /* margin-bottom: 0.5rem; */
+    cursor: pointer;
+}
+
+/* show last N moves (rows) */
+/* 0.5rem + (N+1)*1rem + N*4px + 1rem */
+.Game-module_history-last-1_lL_tw {
+    max-height: calc(1rem + 4px);
+    overflow-y: scroll;
+}
+.Game-module_history-last-3_XWOKG {
+    max-height: calc(3rem + 12px);
+    overflow-y: scroll;
+}
+.Game-module_history-last-10_qO_Fv {
+    max-height: calc(10rem + 40px);
+    overflow-y: scroll;
+}
+
+.Game-module_history-row_aZ9GW {
+    margin: 0 0 2px 0;
+    font-family: monospace;
+}
+
+.Game-module_history-icon_zGIuQ {
+    display: inline-block;
+    width: 3rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.Game-module_black-bgnd_gLoI8 {
+    background-color: black;
+    color: white;
+}
+
+.Game-module_white-bgnd_VYXTH {
+    background-color: white;
+    color: black;
+}
+
+.Game-module_nowplaying_lVO7b {
+    display: flex;
+    gap: 13px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Game-module_nowplaying_lVO7b div {
+    width: 250px;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.Game-module_hide_nYWFE {
+    display: none;
+}
+
+.Game-module_black_dXLnE {
+    padding-left: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.Game-module_white_QDZz0 {
+    padding-left: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.Game-module_player_jEpCk {
+    font-family: 'Koulen', cursive;
+    font-size: 19pt;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.Game-module_timer_XbnWX {
+    font-family: 'Koulen', cursive;
+    width: 100px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(56, 56, 56);
+    border-radius: 5px;
+    animation-name: Game-module_time_ehmxm;
+    animation-duration: 0.7s;
+}
+
+
+@keyframes Game-module_time_ehmxm {
+    0%   {transform: scale(0);}
+    100%  {transform: scale(1);}
+    /* 66% {width: 60px; transform: scale(0.5);}
+    100%  {width: 60px; transform: scale(1);} */
+  }
+
+@media (min-width: 1000px) {
+    .Game-module_info_vg06o {
+        max-height: calc(100vh - 8vmin);
+        overflow-y: scroll;
+    }
+
+    /* .history {
+        max-height: calc(45vh - 8vmin);
+        overflow-y: scroll;
+    } */
+}
+
+@media (max-width: 1000px) {
+    .Game-module_board_AjcX9 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Game-module_info_vg06o {
+        width: 100%;
+    }
+
+    .Game-module_container_kaNuZ {
+        flex-direction: column;
+    }
+
+    .Game-module_player_jEpCk {
+        font-size: 5vmin;
+    }
+
+    .Game-module_timer_XbnWX {
+        font-size: 5vmin;
+    }
+
+    .Game-module_nowplaying_lVO7b {
+        height: calc(9vmin);
+    }
+
+    .Game-module_nowplaying_lVO7b div {
+        width: 350px;
+        height: 100%;
+    }
+}
+/*!***********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/About.module.css ***!
+  \***********************************************************************************************************************************************/
+.About-module_container_tG7Y7 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.About-module_dialogues_ApWAD {
+    max-width: 700px;
+}
+
+.About-module_container_tG7Y7 a {
+    color: rgb(146, 195, 255);
+}
+
+.About-module_container_tG7Y7 .About-module_btn-scroll_FPJ2H {
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 900;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .About-module_container_tG7Y7 p {
+        font-size: 4vmin;
+    }
+}
+/*!*********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/ui/Dialogue.module.css (1) ***!
+  \*********************************************************************************************************************************************************/
+.Dialogue-module_container-left_YpDu9 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.Dialogue-module_container-right_ULFW9 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.Dialogue-module_icon-left_TgxRf {
+    margin-right: 1rem;
+    min-width: 6vmin;
+    width: 6vmin;
+}
+
+.Dialogue-module_icon-right_P8PSs {
+    margin-left: 1rem;
+    min-width: 6vmin;
+    width: 6vmin;
+}
+
+.Dialogue-module_icon-left_TgxRf img,
+.Dialogue-module_icon-right_P8PSs img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.Dialogue-module_text_Yp08E {
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+    min-height: 33px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 7px;
+    background-color: rgb(228, 228, 228);
+    color: black;
+    font-family: 'Comic Neue', cursive;
+}
+
+.Dialogue-module_container-left_YpDu9 a,
+.Dialogue-module_container-right_ULFW9 a {
+    color: rgb(0, 72, 160);
+    font-weight: 600;
+    text-decoration: none;
+}
+/*!**************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Settings.module.css ***!
+  \**************************************************************************************************************************************************/
+.Settings-module_container_iioD9 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: white;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+
+@media (max-width:1000px) {
+    .Settings-module_container_iioD9 p, .Settings-module_container_iioD9 span {
+        font-size: 3.5vmin;
+    }
+}
+
+.Settings-module_container_iioD9 a {
+    color: rgb(146, 195, 255);
+}
+
+.Settings-module_container-families__829g {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.Settings-module_info-config_Z8st3 {
+    display: flex;
+    flex-direction: column;
+    /* margin: 1rem 1rem 2rem 0; */
+}
+
+.Settings-module_config-btn_xszfb {
+    margin: 0.5rem 2rem 1rem 1rem;
+    padding: 0.7rem 2rem 0.5rem 1rem;
+    width: fit-content;
+    /* font-weight: bold; */
+    background-color: white;
+    outline: none;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: rgb(95, 95, 95);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    /* box-shadow: 2px 2px rgb(169, 169, 169) */
+}
+
+.Settings-module_hide_mabOp {
+    display: none;
+}
+
+.Settings-module_info-status_PD3F2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Settings-module_help_E7OjS {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    color: white;
+}
+
+.Settings-module_config_parAC {
+    padding: 0.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+.Settings-module_icon_bzZsB {
+    font-size: 5vmin;
+}
+
+.Settings-module_config-options_zetwV {
+    border-left: 2px solid rgb(189, 189, 189);
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.Settings-module_config-options_zetwV input {
+    margin-right: 1rem;
+}
+
+.Settings-module_pointer_OMcpD {
+    cursor: pointer;
+}
+
+.Settings-module_checkbox_LyZtG {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: fit-content;
+    font-size: 2.7vmin;
+    /* font-weight: bold; */
+    background-color: white;
+    outline: none;
+    /* border: 1px solid rgb(196, 196, 196); */
+    border: none;
+    /* background-color: rgb(95, 95, 95); */
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Settings-module_help_E7OjS {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.Settings-module_help-instructions_FewaM {
+    display: flex;
+    flex-direction: column;
+    /* font-size: 2.7vmin; */
+    width: fit-content; 
+    border-left: 2px solid rgb(189, 189, 189);
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.Settings-module_help_E7OjS p {
+    /* color: rgb(198, 198, 198); */
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.Settings-module_help_E7OjS p span {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: fit-content;
+    /* font-weight: bold; */
+    background-color: white;
+    outline: none;
+    /* border: 1px solid rgb(196, 196, 196); */
+    border: none;
+    /* background-color: rgb(95, 95, 95); */
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Settings-module_label-help_QPPQ2 {
+    display: flex;
+    width: fit-content;
+    outline: none;
+    margin: 0.7rem 0;
+    color: rgb(198, 198, 198);
+}
+
+.Settings-module_label-help_QPPQ2 input {
+    outline: none;
+}
+
+.Settings-module_color-row_DjGRh {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.Settings-module_color-row-reset_WaPb6 {
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+/*!************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./src/components/chessdrez/src/client/components/Pieces.module.css ***!
+  \************************************************************************************************************************************************/
+.Pieces-module_container_uWiPY {
+    display: flex;
+    align-items: center;
+    border-left: 2px solid rgb(194, 194, 194);
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.Pieces-module_pieces_N6JXg {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-right: 1rem;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.Pieces-module_pieces_N6JXg img {
+    /* object-fit: fill; */
+    width: 35px;
+    max-width: calc(8% - 4px);
+}
+
+.Pieces-module_container_uWiPY button {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: fit-content;
+    font-size: 2.7vmin;
+    /* font-weight: bold; */
+    background-color: white;
+    outline: none;
+    /* border: 1px solid rgb(196, 196, 196); */
+    border: none;
+    /* background-color: rgb(95, 95, 95); */
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}

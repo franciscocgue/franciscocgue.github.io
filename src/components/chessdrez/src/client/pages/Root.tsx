@@ -1,10 +1,13 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import styles from './Root.module.css';
+import { useNavStore } from '../../../../../store/navStore';
 
 const Root = () => {
-    return <div className={styles.container}>
+
+    const isNavbarCollapsed = useNavStore(state => state.isMainNavbarCollapsed)
+    return <div className={`${styles.container} ${isNavbarCollapsed ? styles['container-nvcollapsed'] : styles['container-nvexpanded']}`}>
         <Navbar />
         {<Outlet />}
     </div>

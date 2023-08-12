@@ -78,7 +78,7 @@ const About = () => {
                 </div></Dialogue>
             </div>
 
-            <button onClick={e => {window.scrollTo({ top: 0, behavior: 'smooth' });}} className={styles['btn-scroll']}><BsFillArrowUpSquareFill/></button>
+            {/* <button onClick={e => {window.scrollTo({ top: 0, behavior: 'smooth' });}} className={styles['btn-scroll']}><BsFillArrowUpSquareFill/></button> */}
 
             {/* <p>December 2022</p>
             <p>1. Section "Features" added</p>

@@ -8,13 +8,15 @@ import webpack from '../assets/webpack.png';
 import react from '../assets/react.png';
 import python from '../assets/python.png';
 import node from '../assets/node.png';
+import { useNavStore } from '../store/navStore';
 
 const Home = () => {
 
+    const isNavbarCollapsed = useNavStore(state => state.isMainNavbarCollapsed)
+
     return (
 
-
-        <div className={styles.container}>
+        <div className={`${styles.container} ${isNavbarCollapsed ? styles['container-nvcollapsed'] : styles['container-nvexpanded']}`}>
             <div className={styles.top}>
                 <div className={styles.badge}>
                     <LinkedInBadge />

@@ -8,12 +8,12 @@ const Navbar = () => {
     return (
         <ul className={styles.container}>
             <NavLink
-                to={'/'}
+                to={'/projects/chess'}
             >
                 <img className={styles.logo} src={chess_logo} />
             </NavLink>
             <NavLink
-                to={'/'}
+                to={'/projects/chess'}
                 end
                 className={({ isActive }) =>
                     (isActive ? styles.active : "")}
@@ -23,7 +23,7 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-                to={'/chess'}
+                to={'/projects/chess/game'}
                 className={({ isActive }) =>
                     (isActive ? styles.active : "")}
                 style={{ color: 'white', textDecoration: 'none' }}
@@ -32,7 +32,7 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-                to={'/config'}
+                to={'/projects/chess/config'}
                 end
                 className={({ isActive }) =>
                     (isActive ? styles.active : "")}
@@ -42,7 +42,7 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-                to={'/about'}
+                to={'/projects/chess/about'}
                 end
                 className={({ isActive }) =>
                     (isActive ? styles.active : "")}
