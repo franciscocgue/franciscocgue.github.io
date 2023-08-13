@@ -206,6 +206,31 @@ entries = [
             <p><b>Conclusion: </b>when working with OpenUI5, normal functions are preferred. This might not apply always though, and will surely depend on where the function is used and defined (inside an object or not, for example).</p>
         </>
     },
+    {
+        date: '2023-08-13',
+        title: 'Cost saving example',
+        summary: 'Free hosting',
+        keywords: ['Hosting', 'GitHub Pages', 'AWS'],
+        content: <>
+            <p>Until today I had 2 applications: a React/Node-based Chess Game, and this Code Journal. The game was hosted in an AWS instance, and used a load balancer too. The diary, on the other hand, was hosted in GitHub Pages.</p>
+            <p>So what is the difference? There are many, but 2 key ones for my use cases were:</p>
+            <ul>
+                <li>GitHub Pages is free</li>
+                <li>GitHub Pages can only host static files, which means no server side</li>
+            </ul>
+            <p>In my case the Chess game was using a Node backend. But it was actually a placeholder for possible future features, such as storing game results, multi-player gaming, etc. Skipping that, a static side would be perfect for it. And that is why I embedded it into the Code Journal. You can find it under <i>Hobby Projects</i>.</p>
+            <p>When adding Chessdrez into the Code Journal project, I used this oportunity to include other changes, like using React Router and Zustand. All in all, main changes were:</p>
+            <ul>
+                <li>Copy Chessdrez into Code Journal project</li>
+                <li>Add Chessdrez <b>dependencies</b> into the Code Jourmnal <i>package.json</i></li>
+                <li><b>Remove backend</b> references in copied project</li>
+                <li>(optional) Add <b>Zustand</b> to manage global state</li>
+                <li>(optional) Use <b>React Router</b> to navigate the sections of the Code Journal</li>
+                <li>Include Chessdrez routes as <b>nested routes</b></li>
+                <li>Adapt all <b>CSS</b></li>
+            </ul>
+        </>
+    },
 ]
 
 export default entries;
