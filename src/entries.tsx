@@ -21,7 +21,7 @@ entries = [
             <p>The idea is to use this project as a way to learn, get familiar or improve:</p>
             <p style={{ marginLeft: '2rem' }}><i>TypeScript, app deployment, docker, react redux, react testing library, jest, webpack, bable, debugging</i> and much more!</p>
             <p style={{ borderTop: '1px dashed grey', paddingTop: '1rem', marginTop: '1rem' }}>
-                By the way, game deployed now in <a target='_blank' href={chessGameUrl}>Amazon AWS</a>
+                By the way, game used to be deployed in AWS, but was later embedded into this GitHub Page to save costs 🙃
             </p>
         </>
     },
@@ -155,7 +155,7 @@ entries = [
         summary: 'Deploying Chessdrez on Amazon EC2',
         keywords: ['Hobby Project', 'Deploy', 'Hosting', 'AWS - EC2'],
         content: <>
-            <p>Around half a year ago, I deployed my <a target='_blank' href={chessGameUrl}>Chessdrez application</a> in AWS. Roughly, main steps were:</p>
+            <p>Around half a year ago, I deployed my Chessdrez application in AWS (but later was embedded into this GitHub Page to save costs 🙃). Roughly, main steps were:</p>
             <ol>
                 <li>Setting up the ECS instance</li>
                 <li>SSH-logging into the instace</li>
