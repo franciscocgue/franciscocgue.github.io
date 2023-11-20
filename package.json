@@ -8,7 +8,7 @@
     "build": "webpack",
     "local": "webpack serve"
   },
-  "author": "Francisco Carmona Guerrero",
+  "author": "Francisco C.",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.3",
