@@ -47,7 +47,7 @@ const About = () => {
                 <Dialogue icon={peonIcon} iconSide='right' key={10}><p style={{ margin: '0' }}>Cool! What about the hosting?</p></Dialogue>
 
                 <Dialogue icon={logo} iconSide='left' key={11}><div>
-                    <p style={{ margin: '0' }}>The application is hosted in AWS, using <a href='https://aws.amazon.com/ec2/' target={'_blank'}>EC2</a>. Just for <i>fun</i> there is also a Load Balancer. And images come from an <a href='https://aws.amazon.com/s3/' target={'_blank'}>S3</a> bucket.</p>
+                    <p style={{ margin: '0' }}>The application is hosted in <s>AWS, using <a href='https://aws.amazon.com/ec2/' target={'_blank'}>EC2</a>. Just for <i>fun</i> there is also a Load Balancer. And images come from an <a href='https://aws.amazon.com/s3/' target={'_blank'}>S3</a> bucket</s> in <a href='https://pages.github.com/' target={'_blank'}>GitHub Pages</a> (<u>note:</u> migrated from AWS to GitHub Pages to save costs, including getting the application embedded into the Code Journal one).</p>
                 </div></Dialogue>
 
                 <Dialogue icon={peonIcon} iconSide='right' key={12}><p style={{ margin: '0' }}>One last question, what is already available?</p></Dialogue>
