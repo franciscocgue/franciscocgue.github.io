@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './App.module.css';
 import { EntryType } from './types';
+import { Image } from 'antd';
 
 const chessGameUrl = 'http://chessalb-1072294051.eu-central-1.elb.amazonaws.com';
 
@@ -10,7 +11,7 @@ entries = [
         date: '2022-07-01',
         title: 'Chess Game',
         summary: 'Hobby project - learning',
-        keywords: ['Hobby Project'],
+        keywords: ['Hobby Project', 'Chessdrez'],
         content: <>
             <p>I decided to start a hobby project to try things for which I do not have time in the fast-paced work environment. I picked a Chess game, for three main reasons:</p>
             <ul>
@@ -153,7 +154,7 @@ entries = [
         date: '2023-01-29',
         title: 'Deploying in AWS',
         summary: 'Deploying Chessdrez on Amazon EC2',
-        keywords: ['Hobby Project', 'Deploy', 'Hosting', 'AWS - EC2'],
+        keywords: ['Hobby Project', 'Deploy', 'Hosting', 'AWS - EC2', 'Chessdrez'],
         content: <>
             <p>Around half a year ago, I deployed my Chessdrez application in AWS (but later was embedded into this GitHub Page to save costs 🙃). Roughly, main steps were:</p>
             <ol>
@@ -229,6 +230,648 @@ entries = [
                 <li>Include Chessdrez routes as <b>nested routes</b></li>
                 <li>Adapt all <b>CSS</b></li>
             </ul>
+        </>
+    },
+
+    // ####################################
+    // CRAFTIFY
+    // ####################################
+
+    {
+        date: '2023-12-22',
+        title: 'Craftify - 0 - new hobby project',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+
+            <p>Get started creating apps with no-code & low-code... with Craftify!</p>
+
+
+            <p>This project is born out of pure curiosity. The idea is to create a very simple application<b style={{ color: 'darkblue' }}>(*)</b> that allows a user to create applications. Initially super simple, later to be (hopefully) expanded with new features.</p>
+
+            <p><b>DISCLAIMER</b></p>
+
+            <p>After working with some of these low-code applications that allow one to create applications (websites but also desktop), I realized I really wonder how they work, what is the complexity behind.</p>
+
+            <p>So I wanted to try and make something similar (even if way simpler), to get a better understanding.</p>
+
+            <p>Therefore the key concepts or ideas behind, such as drag and drop of components into the canvas, are of coursed shared with these other applications.</p>
+
+            <p style={{ color: 'darkblue' }}><b>(*)</b> 4 months after starting the project I can only laugh at that 'very simple'. Refreshing how such a simple idea can grow and grow in no time!</p>
+
+        </>
+    },
+    {
+        date: '2023-12-23',
+        title: 'Craftify - 1 - Concept',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>With <a href='https://vitejs.dev/' target='_blank'>vite</a> and a mega simple layout, the project is started!</p>
+
+            <p>There is also some logic that was sketched on paper, including workflows, components, pages, and possible future features.</p>
+
+            <p>Basically, the main page should include</p>
+
+            <ul>
+                <li>toolbar: save, preview, etc.</li>
+                <li>component palette</li>
+                <li>variables</li>
+                <li>main canvas</li>
+                <li>properties palette</li>
+                <li>application tree</li>
+            </ul>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d01.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>Spoiler: Mega basic layout not worth previewing - click image to preview 😃</p>
+            </div>
+        </>
+    },
+    {
+        date: '2023-12-28',
+        title: 'Craftify - 2 - basic drag and drop',
+        summary: 'Drag and drop with dnd kit',
+        keywords: [' Craftify ⭐', 'dnd kit', 'Dragging'],
+        content: <>
+
+            <p>Slightly better layout and drag and drop functionality! 🥳</p>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d02.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+
+            <p>Using the cool <a href='https://dndkit.com/' target='_blank'>dnd kit</a>, we are able to drag and drop a few components into the canvas.</p>
+
+            <p>What now works (even if barebones):</p>
+
+            <ul>
+                <li>dragging</li>
+                <li>dropping (known delta coordinates)</li>
+                <li>dynamic creation of components</li>
+                <li>canvas highlighted when component hovering</li>
+                <li>canvas should be ready for positioning components (relative / absolute), including scrollbar when overflowing</li>
+            </ul>
+
+        </>
+    },
+    {
+        date: '2023-12-30',
+        title: 'Craftify - 3 - zustand & Ant Design',
+        summary: 'New libraries',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Visually there is not much of a difference with respect to Day 2, but functionally it is quite something (at least I like to think that).</p>
+            <ul>
+                <li>Added <a href='https://github.com/pmndrs/zustand' target='_blank'>zustand</a> to manage state (list) of components added to the canvas</li>
+                <li>Better positioning of dragged components (long story short, solved some positioning issues due to e.g., having the component palette scrolled-down before dragging; custom dnd kit modifiers and collision detectors where used)</li>
+                <li>Using <a href='https://ant.design/' target='_blank'>Ant Design</a> for (re-)usable components</li>
+            </ul>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d03.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+        </>
+    },
+    {
+        date: '2024-01-06',
+        title: 'Craftify - 4 - component selection',
+        summary: 'New features',
+        keywords: [' Craftify ⭐'],
+        content: <>
+
+
+            <ul>
+                <li>More accurate component positioning and better dragging experience</li>
+                <li>Selectable components (this will be useful later on for the <i>Component Palette</i>)</li>
+            </ul>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={130}
+                    src='src\assets\image_d04_1.png'
+                    style={{ borderRadius: '10px' }}
+                    preview={false}
+                />
+            </div>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={130}
+                    src='src\assets\image_d04_2.png'
+                    style={{ borderRadius: '10px' }}
+                    preview={false}
+                />
+            </div>
+
+            <p>Once again, visually not much has changed. It seems positioning components with <code className={styles.code}>position: absolute</code> in a <code className={styles.code}>position: relative</code> container in dnd kit is not that much fun, meaning that the <code className={styles.code}>left</code> (etc.) attributes of the dragged component is no longer that of the dragged one, but of the inmediate container.</p>
+
+            <p>Rendering components dynamically based on an array works perfectly, until you decided to filter out some of the components. Should have been caused by a poor ID or Key for the mapped components, but that was OK.</p>
+
+            <p>The first issue got solved editing how the <code className={styles.code}>measuring</code> prop in the <code className={styles.code}>DnDContext</code> works <a href='https://github.com/clauderic/dnd-kit/issues/50' target='_blank'>(more info)</a>. For the second, keeping the display of the component been dragged in the canvas solved the issue, but it also improves UX. Initial position of the dragged component is greyed out, to keep it as a reference.</p>
+
+        </>
+    },
+    {
+        date: '2024-01-07',
+        title: 'Craftify - 5 - new features',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Main new features:</p>
+
+            <ul>
+                <li>Default components (default size, text, etc. depending on each component)</li>
+                <li>Properties palette (properties editor); re-uses ant design components</li>
+                <li>Better TS types for component properties</li>
+                <li>ant design theme (currently fixed as dark mode)</li>
+            </ul>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d05.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+        </>
+    },
+    {
+        date: '2024-01-13',
+        title: 'Craftify - 6 - minor improvements & fixes',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Minor improvements and fixes, including:</p>
+
+            <ul>
+                <li>Now <i>both</i> relative (percentual) and absolute (px) positioning work! 🥳</li>
+                <li>Properties editor working as well, for a very limited number of properties (besides positioning and size ones)</li>
+                <li>Added <i>Preview</i> and <i>Modelling</i> status, so that user can see how the components behave too</li>
+            </ul>
+
+        </>
+    },
+    {
+        date: '2024-01-21',
+        title: "Craftify - 7 - smart properties",
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Saying 'smart' properties is probably cooler than reality, but now I got your attention 😋. Now some properties can have dependencies or relations. For example, a specific value (<i>''</i>) for a property X (<i>url</i> property in a Button) might make another property Y (<i>target</i>) not editable.</p>
+
+            <p>Now there is also contextual help, re-using ant design components.</p>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d07.png'
+                    style={{ borderRadius: '10px' }}
+                    preview={false}
+                />
+
+            </div>
+        </>
+    },
+    {
+        date: '2024-01-27',
+        title: 'Craftify - 8 - keyboard shortcuts',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+
+
+            <ul>
+                <li>Properties are grouped by topic into collapsable / expandable containers</li>
+                <li><i>Delete component</i> feature available; also as keyboard shortcut!
+                    <ul>
+                        <li><b>Note:</b> these things might seem like nothing (and they are), but the logic behind is quite interesting (and almost messy), including tracking onKeyUp and onKeyDown events of several keys; of course it also makes the user's life easier</li>
+                        <li><b>Update: </b> shortcut (temporarily?) removed, since every time you press <i>Delete</i> key, you might remove a component or edit some of its text properties where the cursor was 😩</li>
+                    </ul>
+                </li>
+                <li>Selection of multiple components (with <i>Control</i> down)</li>
+            </ul>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d08_1.png'
+                    style={{ borderRadius: '10px' }}
+                    preview={false}
+                />
+            </div>
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d08_2.png'
+                    style={{ borderRadius: '10px' }}
+                    preview={false}
+                />
+            </div>
+        </>
+    },
+    {
+        date: '2024-02-03',
+        title: 'Craftify - 9',
+        summary: 'Features',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <ul>
+                <li>Removed constraint on canvas bottom side: components can be dragged further down ("outside of 100vh")</li>
+                <li>Default y (top) when creating component is px ("anchor") instead of % (relative); copes better with previous change</li>
+                <li>x (left) and width defaults on the other hand, changed to relative, to be more responsive and simple for the user</li>
+                <li>fix: dragging showed "old size" when dragging after window was resized</li>
+                <li>feature: center align horizontally</li>
+                <li>feature: resizable components by dragging on the canvas</li>
+            </ul>
+        </>
+    },
+    {
+        date: '2024-02-04',
+        title: 'Craftify - 10 - px and % lengths',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+
+            <ul>
+                <li>Added radio buttoms and numerical inputs to manage the component properties (length and unit)
+                    <ul>
+                        <li>Numerical inputs to manage component properties show 2 decimals max</li>
+                        <li>If <i>px</i> set as unit, value is rounded to nearest pixel</li>
+                    </ul>
+                </li>
+                <li>On unit (e.g. width) changed (e.g., from <i>px</i> to <i>%</i>), the length number is recalculated to preserve actual length (width) of component</li>
+            </ul>
+
+        </>
+    },
+    {
+        date: '2024-02-10',
+        title: 'Craftify - 11 - multiple component dragging & testing',
+        summary: '',
+        keywords: [' Craftify ⭐', 'Debugging'],
+        content: <>
+            <p>The functionality to drag multiple components simultaneously was added. Whicle dragging, both the new position and the original one are shown. The bounding rectangle is computed based on the dragged components, and the relative position of them then used for display purposes.</p>
+
+            <p>Of course this new feature broke a couple of things, such as the <i>resize functionality</i>.</p>
+
+            <p>And of course the resize functionality was then fixed ^^</p>
+
+            <p>Finally, the possibility to select multiple components by dragging on the canvas was added. Until now, multiple selection was only possible via Control + click.</p>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d11.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+
+            <p><b>Note on Testing</b></p>
+
+            <p>The work done until now faced of course many bugs. SPo far the primary way to debug was using console logs (please, don't judge). But this new features required something more powerful, so some real debugging on vs code was done, with the following configuration script.</p>
+
+            <pre>
+                <code>{'{'}</code>
+                <code>    {'"version": "0.2.0",'}</code>
+                <code>    {'"configurations": ['}</code>
+                <code>        {'{'}</code>
+                <code>            {'"type": "chrome",'}</code>
+                <code>            {'"request": "launch",'}</code>
+                <code>            {'"name": "Launch Program",'}</code>
+                <code>            {'"skipFiles": ['}</code>
+                <code>                {'"<node_internals>/**"'}</code>
+                <code>            {'],'}</code>
+                <code>            {'"url": "http://localhost:5173",'}</code>
+                <code>            {'"webRoot": "${workspaceFolder}"'}</code>
+                <code>        {'}'}</code>
+                <code>    {']'}</code>
+                <code>{'}'}</code>
+            </pre>
+
+        </>
+    },
+    {
+        date: '2024-02-18',
+        title: 'Craftify - 12 - cleanup, refactoring',
+        summary: 'Time for Cleanup and refactoring!',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>After so many changes, logic became too 'entangled', and large files where most happens (i.e., <i>Designer.tsx</i>) are difficult to manage. They also have many issues (most TypeScript issues where Type definitions are missing, or code does not match the Types).</p>
+
+            <p>And since the second time coded is always better than the first, here the mayor changes:</p>
+
+            <ul>
+                <li>logic refactored: from state variables that were passed down to child components, to a store, where each component can subscribe on need</li>
+                <li>also actions are now directly defined in the store</li>
+                <li>most TypeScript issues corrected</li>
+            </ul>
+
+            <p>This alllowed to go from 473 to  319 lines of code, and from around "(around) 45 problems in this file" to "14 problems in this file", which are relatively unimportant TypeScript complaints.</p>
+
+            <p>As a side note, this cleaning tasks will still be needed as development evolves, and also in other file.</p>
+
+        </>
+    },
+    {
+        date: '2024-02-24',
+        title: 'Craftify - 13 - components positioning',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <ul>
+                <li>Wide variety of options to align multiple selected components:
+                    <ul>
+                        <li>top</li>
+                        <li>left</li>
+                        <li>right</li>
+                        <li>distribute horizontally</li>
+                        <li>... and more!</li>
+                    </ul>
+                </li>
+                <li>On dragging in the canvas, components border is displayed to ease knowing if component will be selected on stop dragging
+                    <ul>
+                        <li>This could also be shown in real time while dragging, but it would make dragging computationally more expensive</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d13.png'
+                    style={{ borderRadius: '10px' }}
+                    preview={false}
+                />
+            </div>
+        </>
+    },
+    {
+        date: '2024-02-25',
+        title: 'Craftify - 14 - mode improvements: preview & modelling',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <ul>
+                <li>
+                    Mode <i>preview</i> improved (borders removed, dragging to select disabled, etc.)
+                </li>
+                <li>
+                    In <i>modelling</i> mode, added overlay to components so they are not interactable and cursor shows as 'draggable'
+                </li>
+            </ul>
+        </>
+    },
+    {
+        date: '2024-03-02',
+        title: 'Craftify - 15 - edition of multiple properties',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <ul>
+                <li>Confirm popup on "delete component(s)" clicked</li>
+                <li>A property might be edited and changes will be applied to all selected components
+                    <ul>
+                        <li>Only properties common to all selected components are displayed</li>
+                        <li>There is a 'safe' checkbox to let user know changes will be applied to all selected components</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d15.png'
+                    style={{ borderRadius: '10px' }}
+                    preview={false}
+                />
+            </div>
+        </>
+    },
+    {
+        date: '2024-03-10',
+        title: 'Craftify - 16 - testing and GitHub Actions',
+        summary: '',
+        keywords: [' Craftify ⭐', 'Testing - Vitest', 'GitHub Actions', 'Pipelines'],
+        content: <>
+            <p>A first test was defined (using <a href='https://vitest.dev/' target='_blank'>Vitest</a>). It consists of verifying that shared properties across components share the same basic settings (e.g., the display name).</p>
+
+            <p>A pipeline (GitHub action) workflow, triggered on every <i>git push</i> to <i>main</i> branch, was defined. It consists of:</p>
+
+            <ul>
+                <li>installs depedencies</li>
+                <li>build the project</li>
+                <li>run the tests</li>
+                <li> check if there are TS issues (or currently it rather <i>confirms</i> that there are issues)</li>
+            </ul>
+
+            <p>The output seems like this:</p>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d16.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+        </>
+    },
+    {
+        date: '2024-03-16',
+        title: 'Craftify - 17',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <ul>
+                <li>fix - track scroll position changes continuously (especially before dragging to select components) and other issues</li>
+                <li>improvement - canvas height automatically increases if component dragged near the bottom</li>
+            </ul>
+        </>
+    },
+    {
+        date: '2024-03-23',
+        title: 'Craftify - 18 - flex containers and some thoughts',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <ul>
+                <li>Lockable canvas height: users can configure whether or not they want canvas height to automagically increase when component dragged near the bottom</li>
+                <li>Many improvements regarding nesting of components and Flex Containers (via the new <i>path</i> property, which indicates the (nested?) component location)
+                    <ul>
+                        <li>Editing properties of nested components</li>
+                        <li>Change position of nested components</li>
+                        <li>Flex Container accepts components from component palette and from canvas</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>There are still some limitations regarding flex containers, for example:</p>
+            <ul>
+                <li>nested components' size</li>
+                <li>to-be-copied components cannot be dragged into the container</li>
+                <li>nested components cannot be dragged back to the canvas</li>
+                <li>flex only aligned vertically</li>
+                <li>missing grid-like component</li>
+            </ul>
+
+            <p>Some of these might be dealt with later on, some others are actually intended (otherwise, the project would never end).</p>
+
+            <p>There are also some bugs (see the <a href='https://github.com/franciscocgue/craftify/issues' target='_blank'>project issues</a> for details). For example, nested components cannot be deleted. Also, current development broke the fact that relative (%) and absolute (px) height are <i>equivalent</i>. Meaning, when a user changes a height from relative to absolute (or vice versa), the actual height of the component as seen on the screen remains, recalculating the new number. This now does not work for <i>height</i> and <i>top</i> properties.</p>
+        </>
+    },
+    {
+        date: '2024-03-24',
+        title: 'Craftify - 19 - theme',
+        summary: '',
+        keywords: [' Craftify ⭐', 'Theme'],
+        content: <>
+            <p>Light theme added! ☀️</p>
+
+            <p>We will need 2 theme settings however, one for the user designing on the <i>Designer</i>, the other for the end user. Maybe we can add a theme component too.</p>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d19.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+        </>
+    },
+    {
+        date: '2024-03-30',
+        title: 'Craftify - 20 - logic!',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Enough of UI, we need some logic!</p>
+
+            <p>After quite enough thinking, comparing different alternatives, and trying to get some cool ideas out of ChatGPT, the logic will be node- (or blueprint-) based. This is a common approach followed out there, maybe for a reason. </p>
+
+            <p>This does not mean, however, that we might later extend a little bit the logic with pretty cool things like <a href='https://codemirror.net:/' target='_blank'>CodeMirror</a>.</p>
+
+            <p>For the nodes, <a href='https://reactflow.dev/' target='_blank'>React Flow</a> was picked. Bringing React Flow inside an Ant Design Drawer component, together with a copuple other changes, looks like this:</p>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d20.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+
+            <p>For the interested reader, these other changes:</p>
+
+            <ul>
+                <li>A draggable component (dnd kit) is used for the left node (palette of functions), so it can be dragged on the canvas</li>
+                <li>A dropped node will be positioned after considering its width and height (so it is centered on mouse), and zoom level of the React Flow canvas</li>
+                <li>The Drawer has an 'expand' botton in case the node flows grow, so that it takes (as the time of writing) 90% of the viewport height
+                    <ul>
+                        <li>An actual gradual resizing on dragging would have been nice, but I lost patience when trying and went for the quick option =D</li>
+                    </ul>
+                </li>
+            </ul>
+        </>
+    },
+    {
+        date: '2024-04-06',
+        title: 'Craftify - 21 - custom logic nodes',
+        summary: '',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Custom Nodes! (Even if the do nothing yet...). Also, the logic canvas state (namely the nodes and the edges - connection between nodes- is saved on the store, for each component).</p>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d21.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+        </>
+    },
+    {
+        date: '2024-04-12',
+        title: 'Craftify - 22',
+        summary: 'Working logic',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Custom Nodes can now save their inner status or data. A trigger node can save the trigger type (e.g., <i>onClick</i>), and a popup or toast node can save the message to show. This nodes are however not yet translated into executable code on the component side. Meaning, onClick will still do nothing.</p>
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d22.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+        </>
+    },
+    {
+        date: '2024-04-14',
+        title: 'Craftify - 23',
+        summary: 'Working logic',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Well, enough of flow <i>does nothing</i>!</p>
+
+            <p>Using the feature that nodes now save their data, extra parameters were added (e.g., message type: info, success, error, etc. on Message node), and new nodes where created (e.g., Delay node).</p>
+
+            <p>Also some logic functions were created, which help on the execution of the nodes. These use a node configuration which contains all the magic (parameters required, functions, etc.).</p>
+
+            <p>The flow below is likely not the most exiting logic ever seen, but... <i>it works!!</i> To trigger it, the user has to click the button on the canvas (in preview mode)!!</p>
+
+
+            <div style={{ padding: '20px' }}>
+                <Image
+                    width={350}
+                    src='src\assets\image_d23.png'
+                    style={{ borderRadius: '10px' }}
+                />
+                <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
+            </div>
+        </>
+    },
+    {
+        date: '2024-04-18',
+        title: 'Craftify - 24',
+        summary: 'Canvas height management... & preview',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>One of those (many) things that seem unimportant and have no image to go with, but improve the overall experience: better canvas height management.</p>
+            <p>Height management was a bit cumbersome due to the cumulative complexity: lockable canvas height vs automatic height increase on component dragged near the bottom, automatic internal height managemenbt when the browser windwo is resized, etc. One problem was, if the window is rezized towards a smaller height, the canvas would add a scrollbar, since the previous, larger height is kept. This usually meant empty scroll area near the bottom. Now, when this happens (resizing from bigger to smaller), a check is done to find the component with maximum height and <i>absolutely positioned</i> (relative positioned elements are not important, since they will resize back to fit in the smaller windwo accordingle (given that height {'<'} 100%)). </p>
+
+            <p>Well, now let's see how many bugs did playing with the canvas size braught!</p>
+
+            <p> Oh, almost forgot, now we have a (almost-) fullscreen preview, to let the user see how the final application really should look like. (Nevermind about the toolbar...)</p>
         </>
     },
 ]

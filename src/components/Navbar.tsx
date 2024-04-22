@@ -17,6 +17,10 @@ interface Props {
     onTopicChange: Dispatch<any>,
 };
 
+function sortNoCase(a: String, b: String) {
+    return a.toLowerCase() < b.toLowerCase() ? -1 : 1;
+}
+
 const Navbar = ({ keywords, onTopicChange }: Props) => {
 
     // search key
@@ -136,7 +140,7 @@ const Navbar = ({ keywords, onTopicChange }: Props) => {
                     </li>}
                 </ul>
                 {!isNavbarCollapsed && <div className={`${styles.topics} ${isNavbarCollapsed ? styles.collapsed : ''}`}>
-                    {useLocation().pathname === '/journal' && filtered.sort().map((item, idx) => <p className={`${topic === item ? styles['highlight-topic'] : ''}`} key={idx} onClick={() => {
+                    {useLocation().pathname === '/journal' && filtered.sort(sortNoCase).map((item, idx) => <p className={`${topic === item ? styles['highlight-topic'] : ''}`} key={idx} onClick={() => {
                         onTopicChange(topic === item ? '' : item);
                         // current state = new?
                         if (useNavStore.getState().topic === item) {
