@@ -283,9 +283,9 @@ entries = [
             </ul>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d01.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -302,9 +302,9 @@ entries = [
 
             <p>Slightly better layout and drag and drop functionality! 🥳</p>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d02.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -338,9 +338,9 @@ entries = [
                 <li>Using <a href='https://ant.design/' target='_blank'>Ant Design</a> for (re-)usable components</li>
             </ul>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d03.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -361,7 +361,7 @@ entries = [
                 <li>Selectable components (this will be useful later on for the <i>Component Palette</i>)</li>
             </ul>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
                     width={130}
                     src='src\assets\image_d04_1.png'
@@ -370,7 +370,7 @@ entries = [
                 />
             </div>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
                     width={130}
                     src='src\assets\image_d04_2.png'
@@ -403,9 +403,9 @@ entries = [
             </ul>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d05.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -440,9 +440,9 @@ entries = [
             <p>Now there is also contextual help, re-using ant design components.</p>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d07.png'
                     style={{ borderRadius: '10px' }}
                     preview={false}
@@ -471,17 +471,17 @@ entries = [
             </ul>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d08_1.png'
                     style={{ borderRadius: '10px' }}
                     preview={false}
                 />
             </div>
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d08_2.png'
                     style={{ borderRadius: '10px' }}
                     preview={false}
@@ -539,9 +539,9 @@ entries = [
             <p>Finally, the possibility to select multiple components by dragging on the canvas was added. Until now, multiple selection was only possible via Control + click.</p>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d11.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -618,9 +618,9 @@ entries = [
             </ul>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d13.png'
                     style={{ borderRadius: '10px' }}
                     preview={false}
@@ -661,9 +661,9 @@ entries = [
             </ul>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d15.png'
                     style={{ borderRadius: '10px' }}
                     preview={false}
@@ -690,9 +690,9 @@ entries = [
 
             <p>The output seems like this:</p>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d16.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -753,9 +753,9 @@ entries = [
 
             <p>We will need 2 theme settings however, one for the user designing on the <i>Designer</i>, the other for the end user. Maybe we can add a theme component too.</p>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d19.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -777,9 +777,9 @@ entries = [
 
             <p>For the nodes, <a href='https://reactflow.dev/' target='_blank'>React Flow</a> was picked. Bringing React Flow inside an Ant Design Drawer component, together with a copuple other changes, looks like this:</p>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d20.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -807,9 +807,9 @@ entries = [
         content: <>
             <p>Custom Nodes! (Even if the do nothing yet...). Also, the logic canvas state (namely the nodes and the edges - connection between nodes- is saved on the store, for each component).</p>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d21.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -825,9 +825,9 @@ entries = [
         content: <>
             <p>Custom Nodes can now save their inner status or data. A trigger node can save the trigger type (e.g., <i>onClick</i>), and a popup or toast node can save the message to show. This nodes are however not yet translated into executable code on the component side. Meaning, onClick will still do nothing.</p>
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    className={styles.img}
                     src='src\assets\image_d22.png'
                     style={{ borderRadius: '10px' }}
                 />
@@ -850,11 +850,12 @@ entries = [
             <p>The flow below is likely not the most exiting logic ever seen, but... <i>it works!!</i> To trigger it, the user has to click the button on the canvas (in preview mode)!!</p>
 
 
-            <div style={{ padding: '20px' }}>
+            <div className={styles['img-wrapper']}>
                 <Image
-                    width={350}
+                    // width={350}
                     src='src\assets\image_d23.png'
-                    style={{ borderRadius: '10px' }}
+                    // style={{ borderRadius: '10px', width:'100%' }}
+                    className={styles.img}
                 />
                 <p style={{ margin: '0', fontSize: 'small', fontStyle: 'italic', color: '#333' }}>click image to preview</p>
             </div>

@@ -150,6 +150,16 @@ pre code {
     color: rgb(99, 99, 99);
 }
 
+.img-wrapper {
+    padding: 20px;
+    max-width: 350px;
+}
+
+.img {
+    border-radius: 10px;
+    width: 100%;
+}
+
 
 @media only screen and (max-width:600px) {
     /* phones */
@@ -178,5 +188,15 @@ pre code {
 
     .wip-inner {
         flex-direction: column;
+    }
+
+    .img-wrapper {
+        padding: 20px;
+        max-width: 90%;
+    }
+    
+    .img {
+        border-radius: 10px;
+        width: 100%;
     }
 }
