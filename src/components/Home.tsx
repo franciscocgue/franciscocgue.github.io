@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Home.module.css';
-import timeline from '../assets/timeline.png';
+import timeline from '../assets/timeline.jpg';
 import LinkedInBadge from './LinkedInBadge';
 
 import { BsCheckLg } from 'react-icons/bs';

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Entry from "./components/Entry";
-import timeline from './assets/timeline.png';
+import timeline from './assets/timeline.jpg';
 import wip from './assets/work-in-progress.png';
 import { Outlet } from "react-router-dom";
 

@@ -75,7 +75,7 @@
     border: 1px solid grey;
     border-radius: 7px;
     max-height: calc(100vh - 1rem);
-    max-width: 918px;
+    max-width: 1200px;
 }
 
 .timeline {
