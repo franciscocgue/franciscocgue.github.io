@@ -44,7 +44,7 @@ const Home = () => {
                 </div>
             </div>
             <div className={styles.content}>
-                <p style={{ paddingBottom: '1rem', marginBottom: '1rem' }}>But I am not starting at the beginning of the journey, so what happened until then...</p>
+                <p style={{ paddingBottom: '1rem', marginBottom: '1rem' }}>But I am not starting at the beginning of the journey, and since an picture is worth a thousand words...</p>
                 <div className={styles.timeline}>
                     <img width='100%' src={timeline} />
                 </div>

@@ -95,7 +95,7 @@ const Navbar = ({ keywords, onTopicChange }: Props) => {
                     </li>
                     <li className={styles.section}>
                         <NavLink
-                            to={'/projects/chess'}
+                            to={'/projects'}
                             // className={({ isActive }) =>
                             //     (isActive ? styles.selected : styles.unselected)}
                             style={({ isActive }) =>

@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client';
 import {
     createBrowserRouter,
     RouterProvider,
-    Route
+    Route,
+    Outlet
 } from "react-router-dom";
 
 import App from './src/App';
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: "/projects",
                 element: <Projects />,
+            },
+            {
+                path: "/projects",
+                // element: <div><Outlet /></div>,
                 children: [
                     {
                         path: 'chess',

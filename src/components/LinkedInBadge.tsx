@@ -32,7 +32,7 @@ const LinkedInBadge = () => {
                     <img width={75} src={photo} />
                 </div>
                 <div className={styles.name}>Francisco Carmona Guerrero</div>
-                <a className={styles.link} target={'_blank'} href='https://www.linkedin.com/in/francisco-c-504773118'>Profile</a>
+                <a className={styles.link} target={'_blank'} href='https://www.linkedin.com/in/francisco-carmona-guerrero-504773118'>Profile</a>
             </div>
         </div>
     )

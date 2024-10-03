@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './App.module.css';
 import { EntryType } from './types';
 import { Image } from 'antd';
+import { BsChatDotsFill, BsLinkedin } from 'react-icons/bs';
+import { TfiNewWindow } from "react-icons/tfi";
 
 const chessGameUrl = 'http://chessalb-1072294051.eu-central-1.elb.amazonaws.com';
 
@@ -873,6 +875,27 @@ entries = [
             <p>Well, now let's see how many bugs did playing with the canvas size braught!</p>
 
             <p> Oh, almost forgot, now we have a (almost-) fullscreen preview, to let the user see how the final application really should look like. (Nevermind about the toolbar...)</p>
+        </>
+    },
+    {
+        date: '2024-05-10',
+        title: 'Craftify - 25',
+        summary: 'Starting Craftify 2 🎉',
+        keywords: [' Craftify ⭐'],
+        content: <>
+            <p>Starting Craftify was a great experience. One of the main takeaways was seeing how a low code solution enabling a user to create relatively complex things (web applications, in this case) might work on the inside, and which are the decisions that might need to be taken during the development of such a low code solution.</p>
+            <p>And it is because of those decisions that I started <b>Craftify 2</b>, with a whole different architectural approach and a bunch of new improvements.</p>
+
+            <p>Most of the <b>process</b> will be <b>posted in LinkedIn</b>, including</p>
+
+            <ul>
+                <li><a target='_blank' href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_webdevelopment-lowcode-sideproject-activity-7216477079922503680-LHGh'>Motivation</a></li>
+                <li><a href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_react-lowcode-hobbyproject-activity-7231928695358124032-ZQ-m'>Example - creating Amazon's home page</a></li>
+            </ul>
+
+            <h4 style={{marginBottom: '0px', marginTop: '40px'}}>Let's talk! <BsChatDotsFill /></h4>
+            <p>If you would like to discuss Craftify, its idea, or the code behind it, feel free to <a target='_blank' href='https://www.linkedin.com/in/francisco-carmona-guerrero-504773118/'>get in touch <TfiNewWindow/></a> on <BsLinkedin color='#0a66c2' title='LinkedIn' />!</p>
+
         </>
     },
 ]
