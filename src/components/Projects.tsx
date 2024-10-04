@@ -32,7 +32,7 @@ const Projects = () => {
                     image={craftify}
                     title='Craftify'
                     description={<div>
-                        <p>I created my own web application builder!</p>
+                        <p>Creating my own web application builder!</p>
                         <p>Check out the
                             <a className={styles.link} href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_webdevelopment-lowcode-sideproject-activity-7216477079922503680-LHGh' target='_blank'>motivation</a>,
                             <a className={styles.link} href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_sideproject-react-lowcode-activity-7224364691047784448-edWI' target='_blank'>the leassons learned</a> and
@@ -46,7 +46,7 @@ const Projects = () => {
                     title='Code Journal'
                     bgColor='#00d49f'
                     description={<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <p>Here tracking progress and lessons. Not so active now, but it will make a comeback! Craftify's beginnings are there 😄</p>
+                        <p>Here tracking progress and lessons. Not so active now, but it will make a comeback! Craftify's beginnings are documented here 😄</p>
                         <button
                             className={styles['card-btn']}
                             onClick={() => navigate('/journal')}
