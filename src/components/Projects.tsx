@@ -38,6 +38,10 @@ const Projects = () => {
                             <a className={styles.link} href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_sideproject-react-lowcode-activity-7224364691047784448-edWI' target='_blank'>the leassons learned</a> and
                             <a className={styles.link} href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_react-lowcode-hobbyproject-activity-7231928695358124032-ZQ-m' target='_blank'>a demo</a>!
                         </p>
+                        <button
+                            className={styles['card-btn']}
+                            onClick={() => navigate('https://github.com/franciscocgue/craftify2')}
+                        > Check the repo!</button>
                     </div>
                     }
                 />
