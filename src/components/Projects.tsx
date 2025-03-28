@@ -7,6 +7,7 @@ import aiGame from '../assets/ai-game.png';
 import craftify from '../assets/craftify2-motivation.png';
 import codeJournalImg from '../assets/code-journal.png';
 import { useNavigate } from "react-router-dom";
+import { FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
 
@@ -31,17 +32,18 @@ const Projects = () => {
                 <Card
                     image={craftify}
                     title='Craftify'
-                    description={<div>
-                        <p>Creating my own web application builder!</p>
-                        <p>Check out the
+                    description={<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <p>Creating my own web application builder! Check out the
                             <a className={styles.link} href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_webdevelopment-lowcode-sideproject-activity-7216477079922503680-LHGh' target='_blank'>motivation</a>,
                             <a className={styles.link} href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_sideproject-react-lowcode-activity-7224364691047784448-edWI' target='_blank'>the leassons learned</a> and
                             <a className={styles.link} href='https://www.linkedin.com/posts/francisco-carmona-guerrero-504773118_react-lowcode-hobbyproject-activity-7231928695358124032-ZQ-m' target='_blank'>a demo</a>!
                         </p>
-                        <button
+                        <a
                             className={styles['card-btn']}
-                            onClick={() => navigate('https://github.com/franciscocgue/craftify2')}
-                        > Check the repo!</button>
+                            href='https://github.com/franciscocgue/craftify2' target='_blank'
+                            style={{display: 'flex', alignContent: 'center', alignItems: 'center', gap: '10px'}}
+                            // onClick={() => navigate('https://github.com/franciscocgue/craftify2')}
+                        > <FaGithub /> Repo!</a>
                     </div>
                     }
                 />
